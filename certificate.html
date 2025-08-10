@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="assist/MK.png" type="image/png">
+  <title>Certificates</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-color: black;
+      background-image:
+        linear-gradient(to right, rgba(255, 0, 0, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 0, 0, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 0, 0, 0.3), rgba(0, 0, 0, 0) 80%);
+      background-size: 50px 50px, 50px 50px, 100% 100%;
+      background-repeat: repeat;
+      color: #e0e0e0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        background-size: 40px 40px, 40px 40px, 100% 100%;
+        background-image:
+          linear-gradient(to right, rgba(255, 0, 0, 0.08) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(255, 0, 0, 0.08) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(255, 0, 0, 0.25), rgba(0, 0, 0, 0) 70%);
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        background-size: 30px 30px, 30px 30px, 100% 100%;
+        background-image:
+          linear-gradient(to right, rgba(255, 0, 0, 0.06) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(255, 0, 0, 0.06) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(255, 0, 0, 0.2), rgba(0, 0, 0, 0) 60%);
+      }
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background-color: #1e1e1e;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+      z-index: 999;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #e23030;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      padding-right: 4rem;
+    }
+
+    nav a:hover {
+      color: #ff2504;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 120px;
+      font-size: 2.5rem;
+      color: #b02c2c;
+    }
+
+    .certificate-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .certificate {
+      background-color: #1e1e1e;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 15px;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .certificate:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+    }
+
+    .certificate img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .certificate-title {
+      font-size: 1.2rem;
+      margin: 10px 0 5px;
+      color: #ffffff;
+    }
+
+    .certificate-provider {
+      font-size: 0.9rem;
+      color: #b02c2c;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal.show {
+      display: flex;
+    }
+
+    .modal-content {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      object-fit: contain;
+    }
+
+    .modal img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: auto;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: #ffffff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .close:hover {
+      color: #b02c2c;
+    }
+
+    @media (max-width: 768px) {
+      nav a {
+        margin-left: 1rem;
+        font-size: 0.9rem;
+      }
+
+      .certificate {
+        width: 80%;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-top: 100px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+      }
+
+      nav a {
+        margin: 0.5rem 0;
+      }
+
+      .certificate {
+        width: 90%;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+        margin-top: 100px;
+      }
+
+      .modal-content {
+        max-width: 95%;
+        max-height: 85%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">KUMAR MANTHRI</div>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <h1>My Certificates</h1>
+
+  <div class="certificate-list">
+    <div class="certificate" onclick="openModal('assist/certificate/Plasmid.jpg')">
+      <img src="assist/certificate/Plasmid.jpg" alt="Plasmid Internship Certificate" />
+      <div class="certificate-title">Plasmid Internship</div>
+      <div class="certificate-provider">Plasmid</div>
+    </div>
+
+
+    <div class="certificate" onclick="openModal('assist/certificate/Industrial Training.jpg')">
+      <img src="assist/certificate/Industrial Training.jpg" alt="Industrial Training Certificate" />
+      <div class="certificate-title">Industrial Training</div>
+      <div class="certificate-provider">Plasmid</div>
+    </div>
+
+    <div class="certificate" onclick="openModal('assist/certificate/plasmid (3)_page-0001.jpg')">
+      <img src="assist/certificate/plasmid (3)_page-0001.jpg" alt="Letter of Recommendation" />
+      <div class="certificate-title">Letter of Recommendation</div>
+      <div class="certificate-provider">Plasmid</div>
+    </div>
+
+    <div class="certificate" onclick="openModal('assist/certificate/SQL.jpg')">
+      <img src="assist/certificate/SQL.jpg" alt="SQL Certificate" />
+      <div class="certificate-title">Certificate of Accomplishment</div>
+      <div class="certificate-provider">Hacker Rank</div>
+    </div>
+
+    <div class="certificate-list">
+    <div class="certificate" onclick="openModal('assist/certificate/oracle.png')">
+      <img src="assist/certificate/oracle.png" alt="Plasmid Internship Certificate" />
+      <div class="certificate-title">Oracle</div>
+      <div class="certificate-provider">Oracle</div>
+    </div>
+
+
+    <div class="certificate" onclick="openModal('assist/certificate/C++ certificate .png')">
+      <img src="assist/certificate/C++ certificate .png" alt="C++ Certificate" />
+      <div class="certificate-title">C++ Certificate</div>
+      <div class="certificate-provider">Amrita University</div>
+    </div>
+
+    <div class="certificate" onclick="openModal('assist/certificate/hackathon.png')">
+      <img src="assist/certificate/hackathon.png" alt="Hackathon Certificate" />
+      <div class="certificate-title">Hackathon</div>
+      <div class="certificate-provider">Amrita University</div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="myModal" class="modal" onclick="closeModal()">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImg" />
+  </div>
+
+  <script>
+    function openModal(imgSrc) {
+      const modal = document.getElementById("myModal");
+      const modalImg = document.getElementById("modalImg");
+      modalImg.src = imgSrc;
+      modal.classList.add("show");
+    }
+
+    function closeModal() {
+      const modal = document.getElementById("myModal");
+      modal.classList.remove("show");
+    }
+  </script>
+
+</body>
+</html>

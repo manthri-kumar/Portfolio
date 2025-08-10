@@ -1,0 +1,293 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Header */
+header {
+  background-color: #1f1f1f;
+  padding: 20px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+header nav a {
+  color: #e0e0e0;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #ff6347;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #252525;
+  color: #fff;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hero .project-title {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.hero .tagline {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.hero .cta-btn {
+  background-color: #fff;
+  color: #333;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.hero .cta-btn:hover {
+  background-color: #f7c5b9;
+}
+
+/* Sections */
+section {
+  padding: 60px 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* About Section */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-image {
+  flex: 1;
+  min-width: 250px;
+  max-width: 400px;
+  margin-right: 40px;
+}
+
+.project-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.about-content {
+  flex: 2;
+}
+
+.about-content h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Tech list */
+h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  font-size: 18px;
+}
+
+.tech-list li {
+  background-color: #1f1f1f;
+  padding: 12px 25px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+/* Features */
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.feature {
+  width: 45%;
+  padding: 20px;
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
+}
+
+/* Contact Section */
+.contact .cta-btn {
+  background-color: #ff6347;
+  color: #fff;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.contact p {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #1f1f1f;
+  color: #ccc;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-image {
+    margin: 0 0 20px 0;
+  }
+
+  .feature {
+    width: 100%;
+  }
+}
+
+.btn-group {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.btn-group .cta-btn {
+  background-color: #fff;
+  color: #333;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-group .cta-btn:hover {
+  background-color: #fbfbfb;
+  transform: scale(1.05);
+}
+/* Base styles are assumed to be for desktop */
+
+/* Medium Devices - Tablets (768px and below) */
+@media (max-width: 768px) {
+  header .container, 
+  .about-container,
+  .hero .container,
+  .features .container,
+  .contact .container,
+  footer .container {
+      flex-direction: column;
+      text-align: center;
+      padding: 0 1rem;
+  }
+
+  nav a {
+      display: block;
+      margin: 10px 0;
+  }
+
+  .project-image img {
+      max-width: 100%;
+      height: auto;
+  }
+
+  .feature-list {
+      flex-direction: column;
+      gap: 2rem;
+  }
+
+  .btn-group {
+      flex-direction: column;
+      gap: 10px;
+  }
+}
+
+/* Small Devices - Phones (480px and below) */
+@media (max-width: 480px) {
+  h1.logo {
+      font-size: 1.5rem;
+  }
+
+  .hero-content h2.project-title {
+      font-size: 1.8rem;
+  }
+
+  .tagline {
+      font-size: 1rem;
+  }
+
+  .cta-btn {
+      font-size: 0.9rem;
+      padding: 0.6rem 1rem;
+  }
+
+  .tech-list li {
+      font-size: 0.9rem;
+  }
+}

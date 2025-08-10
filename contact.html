@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Me - Dark Theme</title>
+  <link rel="stylesheet" href="contact.css">
+  <link rel="icon" href="assist/MK.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">KUMAR MANTHRI</div>
+
+    <div class="hamburger">&#9776;</div> <!-- hamburger icon -->
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="certificate.html">Certificates</a>
+    </nav>
+  </header>
+
+  <section class="contact">
+    <h2>Contact Me</h2>
+    <div class="underline"></div>
+    <p>Feel free to Contact me by submitting the form below and I will get back to you as soon as possible</p>
+
+    <form action="https://formspree.io/f/mldjaydq" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/manthri._.kumar/"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/kumar-manthri-8479bb32a/"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </section>
+  
+
+</body>
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+</html>
