@@ -1,36 +1,148 @@
-<html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kumar Manthri | Portfolio</title>
-  <link rel="stylesheet" href="project.css" />
-</head>
-<body>
-  <header>
-    <div class="logo">KUMAR MANTHRI</div>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects | Kumar Manthri</title>
 
-  <section class="projects">
-    <h2>My Projects</h2>
-    <div class="project-list">
-      <div class="project">
-        <h3>Daily Cart</h3>
-        <p>Daily Cart is a comprehensive online grocery shopping platform that offers a wide selection of daily essentials..</p>
+<link rel="stylesheet" href="projects.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="assist/mk-logo.png">
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="certificate.html">Certificates</a>
+    </div>
+
+    <div></div>
+  </nav>
+</header>
+
+
+<section class="projects-section fade-up">
+
+
+  <!-- FILTER BUTTONS -->
+  <div class="filter-tabs">
+    <button class="tab active" data-filter="all">All</button>
+    <button class="tab" data-filter="completed">Completed</button>
+    <button class="tab" data-filter="progress">In Progress</button>
+    <button class="tab" data-filter="planned">Planned</button>
+  </div>
+
+
+  <!-- PROJECT GRID -->
+  <div class="projects-grid">
+
+    <!-- CARD 1 -->
+    <div class="project-card completed">
+      <img src="assist/d.png">
+
+      <div class="project-info">
+
+        <div class="title-row">
+          <h3>Daily Cart</h3>
+          <span class="badge completed-badge">
+            <i class="fa-solid fa-check"></i> Completed
+          </span>
+        </div>
+
+        <p class="stack">HTML • CSS • JavaScript</p>
+
+        <p class="desc">
+          An online grocery e-commerce platform with cart & checkout.
+        </p>
+
+        <a class="link" href="DCProject.html">Source code</a>
       </div>
-      <div class="project">
-        <h3>Grocery App</h3>
-        <p>An e-commerce grocery platform built using Node.js and MySQL.</p>
+    </div>
+
+
+    <!-- CARD 2  NOW COMPLETED -->
+    <div class="project-card completed">
+      <img src="assist/HBG.png">
+
+      <div class="project-info">
+
+        <div class="title-row">
+          <h3>Gesture-Based Calculator</h3>
+          <span class="badge completed-badge">
+            <i class="fa-solid fa-check"></i> Completed
+          </span>
+        </div>
+
+        <p class="stack">Python • OpenCV</p>
+
+        <p class="desc">
+          A real-time calculator powered by computer-vision hand gesture detection.
+        </p>
+
+        <a class="link" href="HBC.html">Source code</a>
       </div>
-      <div class="more-projects">
-        <a href="Projects.html" class="more-link"></a>
+    </div>
+
+
+    <!-- CARD 3 -->
+    <div class="project-card completed">
+      <img src="assist/evento.png">
+
+      <div class="project-info">
+
+        <div class="title-row">
+          <h3>Evento</h3>
+          <span class="badge completed-badge">
+            <i class="fa-solid fa-check"></i> Completed
+          </span>
+        </div>
+
+        <p class="stack">HTML • CSS • JS</p>
+
+        <p class="desc">
+          A sleek event-management platform for event planning & booking.
+        </p>
+
+        <a class="link" href="Eventoproject.html">Source code</a>
       </div>
-    </div>  
-  </section>
+    </div>
+
+
+    <!-- CARD 4 -->
+    <div class="project-card planned">
+      <img src="assist/image.png">
+
+      <div class="project-info">
+
+        <div class="title-row">
+          <h3>TravelMate CLI</h3>
+        </div>
+
+        <p class="stack">C Programming</p>
+
+        <p class="desc">
+          Command-line travel assistant to explore destinations & manage bookings.
+        </p>
+
+        <a class="link" href="#">Source code</a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<script src="project.js"></script>
+
+</body>
 </html>

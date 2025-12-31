@@ -7,215 +7,176 @@
   <title>Certificates</title>
   <style>
     body {
-      margin: 0;
-      height: 100vh;
-      background-color: black;
-      background-image:
-        linear-gradient(to right, rgba(255, 0, 0, 0.1) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 0, 0, 0.1) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 0, 0, 0.3), rgba(0, 0, 0, 0) 80%);
-      background-size: 50px 50px, 50px 50px, 100% 100%;
-      background-repeat: repeat;
-      color: #e0e0e0;
-      font-family: 'Poppins', sans-serif;
-    }
+  margin: 0;
+  height: 100vh;
+  background-color: black;
+  background-image:
+    linear-gradient(to right, rgba(255,123,0,0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,123,0,0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,123,0,0.25), rgba(0,0,0,0) 80%);
+  background-size: 50px 50px, 50px 50px, 100% 100%;
+  background-repeat: repeat;
+  color: #e0e0e0;
+  font-family: 'Poppins', sans-serif;
+}
 
-    @media (max-width: 768px) {
-      body {
-        background-size: 40px 40px, 40px 40px, 100% 100%;
-        background-image:
-          linear-gradient(to right, rgba(255, 0, 0, 0.08) 1px, transparent 1px),
-          linear-gradient(to bottom, rgba(255, 0, 0, 0.08) 1px, transparent 1px),
-          linear-gradient(to bottom, rgba(255, 0, 0, 0.25), rgba(0, 0, 0, 0) 70%);
-      }
-    }
+/* Responsive background */
+@media (max-width: 768px) {
+  body {
+    background-size: 40px 40px;
+    background-image:
+      linear-gradient(to right, rgba(255,123,0,0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,123,0,0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,123,0,0.22), rgba(0,0,0,0) 70%);
+  }
+}
 
-    @media (max-width: 480px) {
-      body {
-        background-size: 30px 30px, 30px 30px, 100% 100%;
-        background-image:
-          linear-gradient(to right, rgba(255, 0, 0, 0.06) 1px, transparent 1px),
-          linear-gradient(to bottom, rgba(255, 0, 0, 0.06) 1px, transparent 1px),
-          linear-gradient(to bottom, rgba(255, 0, 0, 0.2), rgba(0, 0, 0, 0) 60%);
-      }
-    }
+@media (max-width: 480px) {
+  body {
+    background-size: 30px 30px;
+    background-image:
+      linear-gradient(to right, rgba(255,123,0,0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,123,0,0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,123,0,0.2), rgba(0,0,0,0) 60%);
+  }
+}
 
-    header {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      background-color: #1e1e1e;
-      padding: 1rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
-      z-index: 999;
-    }
+/* Header */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: #1e1e1e;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(255, 123, 0, 0.25);
+  z-index: 999;
+}
 
-    .logo {
-      font-weight: bold;
-      font-size: 1.5rem;
-      color: #e23030;
-    }
+/* Logo */
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #ff7b00;
+}
 
-    nav a {
-      margin-left: 1.5rem;
-      text-decoration: none;
-      color: #ffffff;
-      font-weight: 500;
-      transition: color 0.3s ease;
-      padding-right: 4rem;
-    }
+/* Nav */
+nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding-right: 4rem;
+}
 
-    nav a:hover {
-      color: #ff2504;
-    }
+nav a:hover {
+  color: #ff7b00;
+}
 
-    h1 {
-      text-align: center;
-      margin-top: 120px;
-      font-size: 2.5rem;
-      color: #b02c2c;
-    }
+/* Title */
+h1 {
+  text-align: center;
+  margin-top: 120px;
+  font-size: 2.5rem;
+  color: #ff7b00;
+}
 
-    .certificate-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
-    }
+/* Certificates Grid */
+.certificate-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
 
-    .certificate {
-      background-color: #1e1e1e;
-      border: 1px solid #333;
-      border-radius: 12px;
-      padding: 15px;
-      width: 300px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s, box-shadow 0.3s;
-      text-align: center;
-      cursor: pointer;
-    }
+.certificate {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 15px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(255,123,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  cursor: pointer;
+}
 
-    .certificate:hover {
-      transform: scale(1.03);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
-    }
+.certificate:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(255,123,0,0.35);
+}
 
-    .certificate img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
+/* Images */
+.certificate img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
 
-    .certificate-title {
-      font-size: 1.2rem;
-      margin: 10px 0 5px;
-      color: #ffffff;
-    }
+/* Text */
+.certificate-title {
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
+  color: white;
+}
 
-    .certificate-provider {
-      font-size: 0.9rem;
-      color: #b02c2c;
-    }
+.certificate-provider {
+  font-size: 0.9rem;
+  color: #ff7b00;
+}
 
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: rgba(0, 0, 0, 0.9);
-      justify-content: center;
-      align-items: center;
-    }
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background-color: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
 
-    .modal.show {
-      display: flex;
-    }
+.modal.show {
+  display: flex;
+}
 
-    .modal-content {
-      max-width: 90%;
-      max-height: 90%;
-      border-radius: 10px;
-      object-fit: contain;
-    }
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
 
-    .modal img {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: auto;
-    }
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
 
-    .close {
-      position: absolute;
-      top: 20px;
-      right: 35px;
-      color: #ffffff;
-      font-size: 40px;
-      font-weight: bold;
-      cursor: pointer;
-      z-index: 1001;
-    }
+.close:hover {
+  color: #ff7b00;
+}
 
-    .close:hover {
-      color: #b02c2c;
-    }
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .certificate { width: 80%; }
+  h1 { font-size: 2rem; }
+}
 
-    @media (max-width: 768px) {
-      nav a {
-        margin-left: 1rem;
-        font-size: 0.9rem;
-      }
+@media (max-width: 480px) {
+  header { flex-direction: column; }
+  nav { width: 100%; }
+  .certificate { width: 90%; }
+  h1 { font-size: 1.8rem; }
+}
 
-      .certificate {
-        width: 80%;
-      }
-
-      h1 {
-        font-size: 2rem;
-        margin-top: 100px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1rem;
-      }
-
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-      }
-
-      nav a {
-        margin: 0.5rem 0;
-      }
-
-      .certificate {
-        width: 90%;
-      }
-
-      h1 {
-        font-size: 1.8rem;
-        margin-top: 100px;
-      }
-
-      .modal-content {
-        max-width: 95%;
-        max-height: 85%;
-      }
-    }
   </style>
 </head>
 <body>
