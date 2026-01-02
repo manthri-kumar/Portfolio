@@ -34,3 +34,15 @@ tabs.forEach(tab => {
 
   });
 });
+
+
+
+// NAV MENU
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", ()=> {
+  navLinks.classList.toggle("active");
+  menuToggle.firstElementChild.classList.toggle("fa-bars");
+  menuToggle.firstElementChild.classList.toggle("fa-xmark");
+});

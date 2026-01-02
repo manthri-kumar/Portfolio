@@ -1,3 +1,6 @@
+/* =========================
+   GLOBAL RESET
+   ========================= */
 *{
   margin:0;
   padding:0;
@@ -8,14 +11,21 @@ body{
   font-family:Poppins,sans-serif;
   background:#0f0f0f;
   color:white;
+  scroll-behavior:smooth;
+
+  /* prevents header overlap */
   padding-top:80px;
 }
 
-/* ================= NAVBAR ================= */
+
+/* =========================
+   NAVBAR
+   ========================= */
 
 header{
   position:fixed;
   top:0;
+  left:0;
   width:100%;
   background:#0b0b0b;
   z-index:1000;
@@ -28,51 +38,96 @@ header{
   padding:18px 65px;
 }
 
+/* LOGO LEFT */
+.logo{
+  justify-self:start;
+}
+
 .logo img{
   height:42px;
-}
-
-/* NAV LINKS */
-
-.nav-links{
-  display:flex;
-  gap:30px;
-}
-
-.nav-links a{
-  position:relative;
-  color:#d6d6d6;
-  text-decoration:none;
-  font-size:14px;
-  padding-bottom:6px;
+  width:auto;
   transition:.3s;
 }
 
-/* hover color */
+.logo img:hover{
+  filter:drop-shadow(0 0 6px rgba(255,255,255,.4));
+}
+
+/* NAV LINKS CENTER */
+.nav-links{
+  display:flex;
+  gap:35px;
+  justify-self:center;
+}
+
+.nav-links a{
+  color:#d6d6d6;
+  font-size:15px;
+  text-decoration:none;
+  font-weight:500;
+  transition:.3s;
+}
+
 .nav-links a:hover{
   color:#ffffff;
 }
 
-/* active page */
-.nav-links a.active{
-  color:#ff7b00;
-  font-weight:600;
+/* ===== Hamburger Button ===== */
+.menu-toggle{
+  font-size:24px;
+  color:white;
+  cursor:pointer;
+  display:none;
+  justify-self:end;
 }
 
-/* underline bar for active link */
-.nav-links a.active::after{
-  content:'';
-  position:absolute;
-  left:0;
-  bottom:-2px;
-  width:100%;
-  height:2.5px;
-  background:#ff7b00;
-  border-radius:10px;
-  box-shadow:0 4px 15px rgba(108,168,255,.5);
+/* ===== Mobile Dropdown ===== */
+@media(max-width:768px){
+
+  .navbar{
+    display:grid;
+    grid-template-columns: auto 1fr auto;
+    align-items:center;
+    padding:14px 20px;
+  }
+
+  .logo{
+    justify-self:start;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
+  /* dropdown menu */
+  .nav-links{
+    position:absolute;
+    top:75px;
+    right:60px;
+
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+
+    background:#0f0f0f;
+    padding:25px 60px;
+    border-radius:18px;
+
+    border:1px solid rgba(255,255,255,.15);
+    box-shadow:0 10px 25px rgba(0,0,0,.6);
+
+    opacity:0;
+    pointer-events:none;
+    transform:translateY(-10px);
+    transition:.3s ease;
+  }
+
+  .nav-links.active{
+    opacity:1;
+    pointer-events:auto;
+    transform:translateY(0);
+  }
 }
-
-
 /* ================= PAGE TITLE ================= */
 
 .page-title{

@@ -72,7 +72,62 @@ header{
   color:#ffffff;
 }
 
+/* ===== Hamburger Button ===== */
+.menu-toggle{
+  font-size:24px;
+  color:white;
+  cursor:pointer;
+  display:none;
+  justify-self:end;
+}
 
+/* ===== Mobile Dropdown ===== */
+@media(max-width:768px){
+
+  .navbar{
+    display:grid;
+    grid-template-columns: auto 1fr auto;
+    align-items:center;
+    padding:14px 20px;
+  }
+
+  .logo{
+    justify-self:start;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
+  /* dropdown menu */
+  .nav-links{
+    position:absolute;
+    top:75px;
+    right:60px;
+
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+
+    background:#0f0f0f;
+    padding:25px 60px;
+    border-radius:18px;
+
+    border:1px solid rgba(255,255,255,.15);
+    box-shadow:0 10px 25px rgba(0,0,0,.6);
+
+    opacity:0;
+    pointer-events:none;
+    transform:translateY(-10px);
+    transition:.3s ease;
+  }
+
+  .nav-links.active{
+    opacity:1;
+    pointer-events:auto;
+    transform:translateY(0);
+  }
+}
 
 /* =========================
    HERO

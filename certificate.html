@@ -163,7 +163,19 @@ h1 {
 .close:hover {
   color: #ff7b00;
 }
+.logo{
+  justify-self:start;
+}
 
+.logo img{
+  height:42px;
+  width:auto;
+  transition:.3s;
+}
+
+.logo img:hover{
+  filter:drop-shadow(0 0 6px rgba(255,255,255,.4));
+}
 /* Responsive Tweaks */
 @media (max-width: 768px) {
   .certificate { width: 80%; }
@@ -182,7 +194,9 @@ h1 {
 <body>
 
   <header>
-    <div class="logo">KUMAR MANTHRI</div>
+    <div class="logo">
+      <img src="assist/mk-logo.png" alt="KM Logo">
+    </div>
     <nav>
       <a href="index.html">Home</a>
     </nav>

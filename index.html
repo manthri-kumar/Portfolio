@@ -27,7 +27,9 @@
       <a href="certificate.html">Certificates</a>
     </div>
 
-    <div></div>
+    <div class="menu-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
 
   </nav>
 </header>
@@ -67,7 +69,6 @@
   </div>
 
   <div class="hero-right fade-up fade-delay-3">
-      <img src="assist/profile.png" alt="Kumar" />
   </div>
 
 </section>
@@ -140,7 +141,7 @@
 </section>
 
 
-<!-- SCROLL ANIMATION SCRIPT -->
+<!-- SCRIPT -->
 <script>
 const elements = document.querySelectorAll('.fade-up');
 
@@ -154,6 +155,17 @@ const observer = new IntersectionObserver(entries => {
 },{ threshold:0.2 });
 
 elements.forEach(el => observer.observe(el));
+
+
+// NAV MENU
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", ()=> {
+  navLinks.classList.toggle("active");
+  menuToggle.firstElementChild.classList.toggle("fa-bars");
+  menuToggle.firstElementChild.classList.toggle("fa-xmark");
+});
 </script>
 
 </body>
