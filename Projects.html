@@ -7,7 +7,7 @@
 
 <link rel="stylesheet" href="projects.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="icon" href="assist/mk-logo.png" type="image/png">
+<link rel="icon" href="assist/mk-logo.png" type="image/png">
 
 </head>
 
@@ -15,9 +15,8 @@
 
 <header class="fade-up show">
   <nav class="navbar">
-
     <div class="logo">
-      <img src="assist/mk-logo.png" alt="KM Logo">
+      <img src="assist/mk-logo.png">
     </div>
 
     <div class="nav-links">
@@ -29,16 +28,13 @@
     <div class="menu-toggle">
       <i class="fa-solid fa-bars"></i>
     </div>
-
   </nav>
 </header>
 
 
-
 <section class="projects-section fade-up">
 
-
-  <!-- FILTER BUTTONS -->
+  <!-- FILTER -->
   <div class="filter-tabs">
     <button class="tab active" data-filter="all">All</button>
     <button class="tab" data-filter="completed">Completed</button>
@@ -46,108 +42,107 @@
     <button class="tab" data-filter="planned">Planned</button>
   </div>
 
-
-  <!-- PROJECT GRID -->
+  <!-- GRID -->
   <div class="projects-grid">
 
-    <!-- CARD 1 -->
+    <!-- Sarathi -->
+    <div class="project-card progress">
+      <img src="assist/SARATHI.png">
+      <div class="project-info">
+        <div class="title-row">
+          <h3>Sarathi</h3>
+          <span class="badge progress-badge">In Progress</span>
+        </div>
+        <p class="stack">React • Node.js • MongoDB • Google Maps API</p>
+        <p class="desc">
+          Smart travel assistant for trip planning & location-based suggestions.
+        </p>
+        <a class="link" href="#">Source code</a>
+      </div>
+    </div>
+
+    <!-- Sanjevani -->
+    <div class="project-card progress">
+      <img src="assist/Sanjeevani.png">
+      <div class="project-info">
+        <div class="title-row">
+          <h3>Sanjevani</h3>
+          <span class="badge progress-badge">In Progress</span>
+        </div>
+        <p class="stack">React • Node.js • MongoDB</p>
+        <p class="desc">
+          Healthcare platform for appointments, records, and assistance.
+        </p>
+        <a class="link" href="#">Source code</a>
+      </div>
+    </div>
+
+    <!-- Daily Cart -->
     <div class="project-card completed">
       <img src="assist/d.png">
-
       <div class="project-info">
-
         <div class="title-row">
           <h3>Daily Cart</h3>
-          <span class="badge completed-badge">
-             Completed
-          </span>
+          <span class="badge completed-badge">Completed</span>
         </div>
-
         <p class="stack">HTML • CSS • JavaScript</p>
-
         <p class="desc">
-          An online grocery e-commerce platform with cart & checkout.
+          Grocery e-commerce platform with cart & checkout.
         </p>
-
         <a class="link" href="DCProject.html">Source code</a>
       </div>
     </div>
 
-
-    <!-- CARD 2  NOW COMPLETED -->
+    <!-- Calculator -->
     <div class="project-card completed">
       <img src="assist/HBG.png">
-
       <div class="project-info">
-
         <div class="title-row">
-          <h3>Gesture-Based Calculator</h3>
-          <span class="badge completed-badge">
-             Completed
-          </span>
+          <h3>Gesture Calculator</h3>
+          <span class="badge completed-badge">Completed</span>
         </div>
-
         <p class="stack">Python • OpenCV</p>
-
         <p class="desc">
-          A real-time calculator powered by computer-vision hand gesture detection.
+          Real-time calculator using hand gesture detection.
         </p>
-
         <a class="link" href="HBC.html">Source code</a>
       </div>
     </div>
 
-
-    <!-- CARD 3 -->
+    <!-- Evento -->
     <div class="project-card completed">
       <img src="assist/evento.png">
-
       <div class="project-info">
-
         <div class="title-row">
           <h3>Evento</h3>
-          <span class="badge completed-badge">
-          Completed
-          </span>
+          <span class="badge completed-badge">Completed</span>
         </div>
-
         <p class="stack">HTML • CSS • JS</p>
-
         <p class="desc">
-          A sleek event-management platform for event planning & booking.
+          Event management and booking platform.
         </p>
-
         <a class="link" href="Eventoproject.html">Source code</a>
       </div>
     </div>
 
-
-    <!-- CARD 4 -->
+    <!-- CLI -->
     <div class="project-card planned">
       <img src="assist/image.png">
-
       <div class="project-info">
-
         <div class="title-row">
           <h3>TravelMate CLI</h3>
         </div>
-
         <p class="stack">C Programming</p>
-
         <p class="desc">
-          Command-line travel assistant to explore destinations & manage bookings.
+          Command-line travel assistant tool.
         </p>
-
         <a class="link" href="#">Source code</a>
       </div>
     </div>
 
   </div>
-
 </section>
 
-
 <script src="project.js"></script>
-
 </body>
 </html>
