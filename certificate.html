@@ -2,274 +2,420 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kumar Manthri - Certifications & Achievements">
+  <meta name="theme-color" content="#050505">
+  <title>Certificates - Kumar Manthri | Full Stack Developer</title>
   <link rel="icon" href="assist/mk-logo.png" type="image/png">
-  <title>Certificates</title>
-  <style>
-    body {
-  margin: 0;
-  height: 100vh;
-  background-color: black;
-  background-image:
-    linear-gradient(to right, rgba(255,123,0,0.1) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255,123,0,0.1) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255,123,0,0.25), rgba(0,0,0,0) 80%);
-  background-size: 50px 50px, 50px 50px, 100% 100%;
-  background-repeat: repeat;
-  color: #e0e0e0;
-  font-family: 'Poppins', sans-serif;
-}
-
-/* Responsive background */
-@media (max-width: 768px) {
-  body {
-    background-size: 40px 40px;
-    background-image:
-      linear-gradient(to right, rgba(255,123,0,0.08) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255,123,0,0.08) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255,123,0,0.22), rgba(0,0,0,0) 70%);
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    background-size: 30px 30px;
-    background-image:
-      linear-gradient(to right, rgba(255,123,0,0.06) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255,123,0,0.06) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255,123,0,0.2), rgba(0,0,0,0) 60%);
-  }
-}
-
-/* Header */
-header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  background-color: #1e1e1e;
-  padding: 1rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 2px 5px rgba(255, 123, 0, 0.25);
-  z-index: 999;
-}
-
-/* Logo */
-.logo {
-  font-weight: bold;
-  font-size: 1.5rem;
-  color: #ff7b00;
-}
-
-/* Nav */
-nav a {
-  margin-left: 1.5rem;
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: 500;
-  transition: color 0.3s ease;
-  padding-right: 4rem;
-}
-
-nav a:hover {
-  color: #ff7b00;
-}
-
-/* Title */
-h1 {
-  text-align: center;
-  margin-top: 120px;
-  font-size: 2.5rem;
-  color: #ff7b00;
-}
-
-/* Certificates Grid */
-.certificate-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-}
-
-.certificate {
-  background-color: #1e1e1e;
-  border: 1px solid #333;
-  border-radius: 12px;
-  padding: 15px;
-  width: 300px;
-  box-shadow: 0 4px 8px rgba(255,123,0,0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
-  text-align: center;
-  cursor: pointer;
-}
-
-.certificate:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 16px rgba(255,123,0,0.35);
-}
-
-/* Images */
-.certificate img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-/* Text */
-.certificate-title {
-  font-size: 1.2rem;
-  margin: 10px 0 5px;
-  color: white;
-}
-
-.certificate-provider {
-  font-size: 0.9rem;
-  color: #ff7b00;
-}
-
-/* Modal */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  inset: 0;
-  background-color: rgba(0,0,0,0.9);
-  justify-content: center;
-  align-items: center;
-}
-
-.modal.show {
-  display: flex;
-}
-
-.modal-content {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-}
-
-.close {
-  position: absolute;
-  top: 20px;
-  right: 35px;
-  color: white;
-  font-size: 40px;
-  cursor: pointer;
-}
-
-.close:hover {
-  color: #ff7b00;
-}
-.logo{
-  justify-self:start;
-}
-
-.logo img{
-  height:42px;
-  width:auto;
-  transition:.3s;
-}
-
-.logo img:hover{
-  filter:drop-shadow(0 0 6px rgba(255,255,255,.4));
-}
-/* Responsive Tweaks */
-@media (max-width: 768px) {
-  .certificate { width: 80%; }
-  h1 { font-size: 2rem; }
-}
-
-@media (max-width: 480px) {
-  header { flex-direction: column; }
-  nav { width: 100%; }
-  .certificate { width: 90%; }
-  h1 { font-size: 1.8rem; }
-}
-
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="certificate.css" />
 </head>
 <body>
 
-  <header>
-    <div class="logo">
-      <img src="assist/mk-logo.png" alt="KM Logo">
+<!-- ==================== NAVBAR ==================== -->
+<header class="navbar-wrapper">
+  <nav class="navbar">
+    <div class="navbar-left">
+      <a href="index.html" class="logo">
+        <img src="assist/mk-logo.png" alt="Kumar Manthri Logo">
+      </a>
     </div>
-    <nav>
-      <a href="index.html">Home</a>
-    </nav>
-  </header>
-
-  <h1>My Certificates</h1>
-
-  <div class="certificate-list">
-    <div class="certificate" onclick="openModal('assist/certificate/Plasmid.jpg')">
-      <img src="assist/certificate/Plasmid.jpg" alt="Plasmid Internship Certificate" />
-      <div class="certificate-title">Plasmid Internship</div>
-      <div class="certificate-provider">Plasmid</div>
+    <div class="navbar-center">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="Projects.html" class="nav-link">Projects</a></li>
+        <li><a href="certificate.html" class="nav-link active">Certificates</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
     </div>
-
-
-    <div class="certificate" onclick="openModal('assist/certificate/Industrial Training.jpg')">
-      <img src="assist/certificate/Industrial Training.jpg" alt="Industrial Training Certificate" />
-      <div class="certificate-title">Industrial Training</div>
-      <div class="certificate-provider">Plasmid</div>
+    <div class="navbar-right">
+      <a href="assist/certificate/KumarManthri.pdf" class="resume-btn" download>
+        <i class="fa-solid fa-download"></i>
+        <span>Resume</span>
+      </a>
     </div>
-
-    <div class="certificate" onclick="openModal('assist/certificate/plasmid (3)_page-0001.jpg')">
-      <img src="assist/certificate/plasmid (3)_page-0001.jpg" alt="Letter of Recommendation" />
-      <div class="certificate-title">Letter of Recommendation</div>
-      <div class="certificate-provider">Plasmid</div>
+    <div class="menu-toggle" id="menuToggle">
+      <span></span><span></span><span></span>
     </div>
+  </nav>
+</header>
 
-    <div class="certificate" onclick="openModal('assist/certificate/SQL.jpg')">
-      <img src="assist/certificate/SQL.jpg" alt="SQL Certificate" />
-      <div class="certificate-title">Certificate of Accomplishment</div>
-      <div class="certificate-provider">Hacker Rank</div>
+<!-- ==================== HERO ==================== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">
+      <span>🏆</span>
+      <span>Professional Certifications</span>
     </div>
-
-    <div class="certificate-list">
-    <div class="certificate" onclick="openModal('assist/certificate/oracle.png')">
-      <img src="assist/certificate/oracle.png" alt="Plasmid Internship Certificate" />
-      <div class="certificate-title">Oracle</div>
-      <div class="certificate-provider">Oracle</div>
-    </div>
-
-
-    <div class="certificate" onclick="openModal('assist/certificate/C++ certificate .png')">
-      <img src="assist/certificate/C++ certificate .png" alt="C++ Certificate" />
-      <div class="certificate-title">C++ Certificate</div>
-      <div class="certificate-provider">Amrita University</div>
-    </div>
-
-    <div class="certificate" onclick="openModal('assist/certificate/hackathon.png')">
-      <img src="assist/certificate/hackathon.png" alt="Hackathon Certificate" />
-      <div class="certificate-title">Hackathon</div>
-      <div class="certificate-provider">Amrita University</div>
+    <h1 class="hero-title">Learning, Building & Growing Continuously</h1>
+    <p class="hero-subtitle">A collection of certifications, internships, technical training programs, and achievements that demonstrate my commitment to continuous learning and professional growth.</p>
+    <div class="hero-metrics">
+      <div class="metric-item">
+        <div class="metric-number">7</div>
+        <div class="metric-label">Certificates Earned</div>
+      </div>
+      <div class="metric-item">
+        <div class="metric-number">3+</div>
+        <div class="metric-label">Industry Programs</div>
+      </div>
+      <div class="metric-item">
+        <div class="metric-number">1</div>
+        <div class="metric-label">Internship Experience</div>
+      </div>
+      <div class="metric-item">
+        <div class="metric-number">2026</div>
+        <div class="metric-label">Career Ready</div>
+      </div>
     </div>
   </div>
+</section>
 
-  <!-- Modal -->
-  <div id="myModal" class="modal" onclick="closeModal()">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <img class="modal-content" id="modalImg" />
+<!-- ==================== FILTER ==================== -->
+<section class="filter-section">
+  <div class="container">
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="internship">Internships</button>
+      <button class="filter-btn" data-filter="certification">Certifications</button>
+      <button class="filter-btn" data-filter="training">Training</button>
+      <button class="filter-btn" data-filter="hackathon">Hackathons</button>
+      <button class="filter-btn" data-filter="achievement">Achievements</button>
+    </div>
   </div>
+</section>
 
-  <script>
-    function openModal(imgSrc) {
-      const modal = document.getElementById("myModal");
-      const modalImg = document.getElementById("modalImg");
-      modalImg.src = imgSrc;
-      modal.classList.add("show");
-    }
+<!-- ==================== CERTIFICATES GRID ==================== -->
+<section class="certificates-section">
+  <div class="container">
+    <div class="certificates-grid">
 
-    function closeModal() {
-      const modal = document.getElementById("myModal");
-      modal.classList.remove("show");
-    }
-  </script>
+      <!-- Plasmid Internship -->
+      <div class="certificate-card" data-category="internship">
+        <div class="card-image">
+          <img src="assist/certificate/Plasmid.jpg" alt="Plasmid Internship Certificate" loading="lazy">
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Plasmid Internship</h3>
+          <p class="card-org">Plasmid • 2025</p>
+          <p class="card-desc">Completed comprehensive internship program with practical software development experience, industry workflows, and professional collaboration in a real-world environment.</p>
+          <div class="card-skills">
+            <span class="skill-tag">Software Development</span>
+            <span class="skill-tag">Industry Experience</span>
+            <span class="skill-tag">Team Collaboration</span>
+          </div>
+          <button class="view-cert-btn" data-img="assist/certificate/Plasmid.jpg" data-title="Plasmid Internship Certificate">
+            View Certificate <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
 
+      <!-- Industrial Training -->
+      <div class="certificate-card" data-category="training">
+        <div class="card-image">
+          <img src="assist/certificate/Industrial Training.jpg" alt="Industrial Training Certificate" loading="lazy">
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Industrial Training</h3>
+          <p class="card-org">Plasmid • 2025</p>
+          <p class="card-desc">Hands-on industrial training program covering professional software engineering practices, development methodologies, and industry-standard tools.</p>
+          <div class="card-skills">
+            <span class="skill-tag">Software Engineering</span>
+            <span class="skill-tag">Industry Exposure</span>
+            <span class="skill-tag">Development Workflow</span>
+          </div>
+          <button class="view-cert-btn" data-img="assist/certificate/Industrial Training.jpg" data-title="Industrial Training Certificate">
+            View Certificate <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Letter of Recommendation -->
+      <div class="certificate-card" data-category="achievement">
+        <div class="card-image">
+          <img src="assist/certificate/plasmid (3)_page-0001.jpg" alt="Letter of Recommendation" loading="lazy">
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Letter of Recommendation</h3>
+          <p class="card-org">Plasmid • 2025</p>
+          <p class="card-desc">Recognition of contribution, performance, and professional conduct during internship and training activities. Validation of skills and work ethic by industry professionals.</p>
+          <div class="card-skills">
+            <span class="skill-tag">Professional Recognition</span>
+            <span class="skill-tag">Performance Excellence</span>
+          </div>
+          <button class="view-cert-btn" data-img="assist/certificate/plasmid (3)_page-0001.jpg" data-title="Letter of Recommendation">
+            View Certificate <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- SQL Certification -->
+      <div class="certificate-card" data-category="certification">
+        <div class="card-image">
+          <img src="assist/certificate/SQL.jpg" alt="SQL Certification" loading="lazy">
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">SQL Certification</h3>
+          <p class="card-org">HackerRank • 2025</p>
+          <p class="card-desc">Demonstrated proficiency in SQL queries, database management, joins, aggregation, and advanced relational database concepts through practical assessments.</p>
+          <div class="card-skills">
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Database Design</span>
+            <span class="skill-tag">Data Analysis</span>
+          </div>
+          <button class="view-cert-btn" data-img="assist/certificate/SQL.jpg" data-title="SQL Certification">
+            View Certificate <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Oracle Certification -->
+      <div class="certificate-card" data-category="certification">
+        <div class="card-image">
+          <img src="assist/certificate/oracle.png" alt="Oracle Certification" loading="lazy">
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Oracle Certification</h3>
+          <p class="card-org">Oracle • 2025</p>
+          <p class="card-desc">Validated understanding of Oracle technologies, software development concepts, and database systems through comprehensive certification examination.</p>
+          <div class="card-skills">
+            <span class="skill-tag">Oracle</span>
+            <span class="skill-tag">Database Systems</span>
+            <span class="skill-tag">Programming</span>
+          </div>
+          <button class="view-cert-btn" data-img="assist/certificate/oracle.png" data-title="Oracle Certification">
+            View Certificate <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- C++ Certification -->
+      <div class="certificate-card" data-category="certification">
+        <div class="card-image">
+          <img src="assist/certificate/C++ certificate .png" alt="C++ Certification" loading="lazy">
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">C++ Certification</h3>
+          <p class="card-org">Amrita University • 2025</p>
+          <p class="card-desc">Demonstrated understanding of object-oriented programming concepts, advanced C++ features, and problem-solving through practical projects and assessments.</p>
+          <div class="card-skills">
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">OOP</span>
+            <span class="skill-tag">DSA Fundamentals</span>
+          </div>
+          <button class="view-cert-btn" data-img="assist/certificate/C++ certificate .png" data-title="C++ Certification">
+            View Certificate <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Hackathon -->
+      <div class="certificate-card" data-category="hackathon">
+        <div class="card-image">
+          <img src="assist/certificate/hackathon.png" alt="Hackathon Participation" loading="lazy">
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Hackathon Participation</h3>
+          <p class="card-org">Amrita University • 2025</p>
+          <p class="card-desc">Participated in collaborative innovation challenges and rapid software development events. Demonstrated problem-solving abilities under time constraints.</p>
+          <div class="card-skills">
+            <span class="skill-tag">Problem Solving</span>
+            <span class="skill-tag">Teamwork</span>
+            <span class="skill-tag">Innovation</span>
+          </div>
+          <button class="view-cert-btn" data-img="assist/certificate/hackathon.png" data-title="Hackathon Participation Certificate">
+            View Certificate <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== ZIG-ZAG TIMELINE ==================== -->
+<section class="timeline-section">
+  <div class="container">
+    <h2 class="section-title">Learning Journey</h2>
+    <p class="section-subtitle">Timeline of growth, achievements, and professional development.</p>
+
+    <div class="timeline-zigzag">
+      <!-- Center spine -->
+      <div class="timeline-spine"></div>
+
+      <!-- Item 1: LEFT -->
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <div class="tl-icon"><i class="fa-solid fa-trophy"></i></div>
+          <h3>Hackathon Participation</h3>
+          <p>Collaborative innovation challenge and rapid development event at Amrita University</p>
+          <span class="tl-year">2025</span>
+        </div>
+        <div class="timeline-node"></div>
+        <div class="timeline-spacer"></div>
+      </div>
+
+      <!-- Item 2: RIGHT -->
+      <div class="timeline-item right">
+        <div class="timeline-spacer"></div>
+        <div class="timeline-node"></div>
+        <div class="timeline-content">
+          <div class="tl-icon"><i class="fa-solid fa-database"></i></div>
+          <h3>SQL Certification</h3>
+          <p>Database design and advanced query proficiency — HackerRank certified</p>
+          <span class="tl-year">2025</span>
+        </div>
+      </div>
+
+      <!-- Item 3: LEFT -->
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <div class="tl-icon"><i class="fa-solid fa-server"></i></div>
+          <h3>Oracle Certification</h3>
+          <p>Enterprise database systems and software development fundamentals</p>
+          <span class="tl-year">2025</span>
+        </div>
+        <div class="timeline-node"></div>
+        <div class="timeline-spacer"></div>
+      </div>
+
+      <!-- Item 4: RIGHT -->
+      <div class="timeline-item right">
+        <div class="timeline-spacer"></div>
+        <div class="timeline-node"></div>
+        <div class="timeline-content">
+          <div class="tl-icon"><i class="fa-solid fa-industry"></i></div>
+          <h3>Industrial Training</h3>
+          <p>Hands-on professional software engineering practices at Plasmid</p>
+          <span class="tl-year">2025</span>
+        </div>
+      </div>
+
+      <!-- Item 5: LEFT -->
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <div class="tl-icon"><i class="fa-solid fa-briefcase"></i></div>
+          <h3>Plasmid Internship</h3>
+          <p>Real-world development experience and industry workflows in web development</p>
+          <span class="tl-year">2025</span>
+        </div>
+        <div class="timeline-node"></div>
+        <div class="timeline-spacer"></div>
+      </div>
+
+      <!-- Item 6: RIGHT -->
+      <div class="timeline-item right">
+        <div class="timeline-spacer"></div>
+        <div class="timeline-node"></div>
+        <div class="timeline-content">
+          <div class="tl-icon"><i class="fa-solid fa-star"></i></div>
+          <h3>Letter of Recommendation</h3>
+          <p>Professional recognition and validation from Plasmid industry mentors</p>
+          <span class="tl-year">2025</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SKILLS SECTION ==================== -->
+<section class="skills-section">
+  <div class="container">
+    <h2 class="section-title">Skills Strengthened Through Continuous Learning</h2>
+    <p class="section-subtitle">Technical and professional competencies developed through certifications and experience.</p>
+    <div class="skills-grid">
+      <div class="skill-card"><div class="skill-icon"><i class="fa-solid fa-code"></i></div><h3>Frontend Development</h3><p>Modern frameworks and responsive UI</p></div>
+      <div class="skill-card"><div class="skill-icon"><i class="fa-solid fa-server"></i></div><h3>Backend Development</h3><p>API design and server-side logic</p></div>
+      <div class="skill-card active"><div class="skill-icon"><i class="fa-solid fa-database"></i></div><h3>Database Management</h3><p>SQL and database architecture</p></div>
+      <div class="skill-card"><div class="skill-icon"><i class="fa-solid fa-lightbulb"></i></div><h3>Problem Solving</h3><p>Algorithm design and optimization</p></div>
+      <div class="skill-card"><div class="skill-icon"><i class="fa-solid fa-gears"></i></div><h3>Software Engineering</h3><p>Development practices and workflows</p></div>
+      <div class="skill-card"><div class="skill-icon"><i class="fa-solid fa-users"></i></div><h3>Team Collaboration</h3><p>Communication and project teamwork</p></div>
+      <div class="skill-card"><div class="skill-icon"><i class="fa-solid fa-comments"></i></div><h3>Professional Communication</h3><p>Technical documentation and presentations</p></div>
+      <div class="skill-card"><div class="skill-icon"><i class="fa-solid fa-brain"></i></div><h3>AI & Emerging Tech</h3><p>Latest technologies and innovations</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== ACHIEVEMENTS ==================== -->
+<section class="achievements-section">
+  <div class="container">
+    <h2 class="section-title">Achievement Highlights</h2>
+    <div class="achievements-grid">
+      <div class="achievement-card"><div class="ach-icon"><i class="fa-solid fa-certificate"></i></div><h3>10+</h3><p>Certificates Earned</p></div>
+      <div class="achievement-card"><div class="ach-icon"><i class="fa-solid fa-briefcase"></i></div><h3>3+</h3><p>Industry Credentials</p></div>
+      <div class="achievement-card"><div class="ach-icon"><i class="fa-solid fa-chart-line"></i></div><h3>1</h3><p>Internship Experience</p></div>
+      <div class="achievement-card"><div class="ach-icon"><i class="fa-solid fa-fire"></i></div><h3>100%</h3><p>Commitment To Learning</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CTA ==================== -->
+<section class="cta-section">
+  <div class="container">
+    <h2 class="cta-title">Ready to Apply My Skills in Real Projects</h2>
+    <p class="cta-subtitle">I am actively seeking software engineering and full stack development internship opportunities where I can contribute, learn, and build impactful products.</p>
+    <div class="cta-buttons">
+      <a href="assist/certificate/KumarManthri.pdf" class="btn btn-primary" download><i class="fa-solid fa-download"></i> Download Resume</a>
+      <a href="Projects.html" class="btn btn-secondary"><i class="fa-solid fa-folder"></i> View Projects</a>
+      <a href="contact.html" class="btn btn-secondary"><i class="fa-solid fa-envelope"></i> Contact Me</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-left">
+        <img src="assist/mk-logo.png" alt="Kumar Manthri" class="footer-logo">
+        <p>Full Stack Developer | AI Enthusiast | Continuous Learner</p>
+      </div>
+      <div class="footer-center">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Projects.html">Projects</a></li>
+          <li><a href="certificate.html">Certificates</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-right">
+        <h4>Follow</h4>
+        <div class="footer-socials">
+          <a href="https://github.com/manthri-kumar" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/kumar-manthri-8479bb32a/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Kumar Manthri. All rights reserved.</p>
+      <p>Built with <span class="heart">♥</span> using HTML, CSS & JavaScript</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== CERTIFICATE MODAL ==================== -->
+<div class="cert-modal" id="certModal" role="dialog" aria-modal="true" aria-label="Certificate viewer">
+  <div class="cert-modal-overlay" id="certModalOverlay"></div>
+  <div class="cert-modal-container">
+    <button class="cert-modal-close" id="certModalClose" aria-label="Close certificate">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="cert-modal-title-bar" id="certModalTitleBar"></div>
+    <div class="cert-modal-body">
+      <img class="cert-modal-img" id="certModalImg" src="" alt="Certificate">
+    </div>
+  </div>
+</div>
+
+<script src="certificate.js"></script>
 </body>
 </html>

@@ -26,61 +26,32 @@ document.addEventListener('click', (e) => {
   }
 });
 
-// ==================== PROJECT FILTERING ====================
+// ==================== ACTIVE NAV LINK ON SCROLL ====================
 
-const filterButtons = document.querySelectorAll('.filter-btn');
-const projectCards = document.querySelectorAll('.project-card');
+function updateActiveNavLink() {
+  const sections = document.querySelectorAll('section');
+  const scrollPosition = window.scrollY + 100;
 
-filterButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    // Remove active class from all buttons
-    filterButtons.forEach(btn => btn.classList.remove('active'));
-    
-    // Add active class to clicked button
-    button.classList.add('active');
-    
-    // Get the filter value
-    const filterValue = button.getAttribute('data-filter');
-    
-    // Filter projects
-    projectCards.forEach(card => {
-      const categories = card.getAttribute('data-category').split(' ');
-      
-      if (filterValue === 'all' || categories.includes(filterValue)) {
-        card.style.display = 'block';
-        card.style.animation = 'fadeInUp 0.6s ease-out forwards';
-      } else {
-        card.style.display = 'none';
-      }
-    });
-  });
-});
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    const sectionId = section.getAttribute('id');
 
-// ==================== INTERSECTION OBSERVER FOR ANIMATIONS ====================
-
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      if (!entry.target.style.animation) {
-        entry.target.style.animation = 'fadeInUp 0.6s ease-out forwards';
-      }
+    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+      navLink.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${sectionId}`) {
+          link.classList.add('active');
+        }
+      });
     }
   });
-}, observerOptions);
+}
 
-// Observe elements
-document.querySelectorAll('.github-item, .featured-text, .featured-image').forEach(el => {
-  el.style.opacity = '0';
-  observer.observe(el);
-});
+window.addEventListener('scroll', updateActiveNavLink);
+updateActiveNavLink();
 
-// ==================== SMOOTH SCROLL ==================== 
+// ==================== SMOOTH SCROLL FOR ANCHOR LINKS ====================
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
@@ -99,6 +70,75 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       });
     }
   });
+});
+
+// ==================== INTERSECTION OBSERVER FOR ANIMATIONS ====================
+
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.animation = 'fadeInUp 0.6s ease-out forwards';
+    }
+  });
+}, observerOptions);
+
+// Observe skill chips and other elements
+document.querySelectorAll('.skill-chip, .info-card, .metric-card').forEach(el => {
+  el.style.opacity = '0';
+  observer.observe(el);
+});
+
+// ==================== FORM HANDLING ====================
+
+const contactForm = document.querySelector('.contact-form');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const submitBtn = contactForm.querySelector('.btn-primary');
+    const originalText = submitBtn.innerHTML;
+
+    submitBtn.innerHTML = '<span>Sending...</span>';
+    submitBtn.disabled = true;
+
+    try {
+      // The form uses Formspree action, so submit normally
+      contactForm.submit();
+      
+      setTimeout(() => {
+        submitBtn.innerHTML = '<span>✓ Sent!</span>';
+        
+        setTimeout(() => {
+          submitBtn.innerHTML = originalText;
+          submitBtn.disabled = false;
+          contactForm.reset();
+        }, 2000);
+      }, 500);
+    } catch (error) {
+      console.error('Form error:', error);
+      submitBtn.innerHTML = originalText;
+      submitBtn.disabled = false;
+    }
+  });
+}
+
+// ==================== NAVBAR BACKGROUND ON SCROLL ====================
+
+window.addEventListener('scroll', () => {
+  const navbar = document.querySelector('.navbar-wrapper');
+  
+  if (window.scrollY > 50) {
+    navbar.style.paddingTop = '8px';
+  } else {
+    navbar.style.paddingTop = '16px';
+  }
 });
 
 // ==================== BUTTON RIPPLE EFFECT ====================
@@ -149,11 +189,21 @@ function debounce(func, wait) {
   };
 }
 
+const debouncedScroll = debounce(() => {
+  updateActiveNavLink();
+}, 10);
+
+window.addEventListener('scroll', debouncedScroll, { passive: true });
+
 // ==================== INITIALIZATION ====================
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('%c✨ Projects Page Loaded', 'font-size: 16px; font-weight: bold; color: #ff7a00;');
-  console.log('%cFull Stack Development Projects Showcase', 'font-size: 12px; color: #a1a1aa;');
+  // Initialize active nav link
+  updateActiveNavLink();
+
+  // Log portfolio loaded
+  console.log('%c✨ Premium Portfolio Loaded', 'font-size: 16px; font-weight: bold; color: #ff7a00;');
+  console.log('%cBuilt with HTML, CSS & JavaScript', 'font-size: 12px; color: #a1a1aa;');
 });
 
 // ==================== SCROLL TO TOP BUTTON ====================
@@ -226,11 +276,4 @@ document.addEventListener('keydown', (e) => {
     navLinks.classList.remove('active');
     menuToggle.classList.remove('active');
   }
-});
-
-// ==================== STAGGER ANIMATIONS ====================
-
-const projectCards_Animated = document.querySelectorAll('.project-card');
-projectCards_Animated.forEach((card, index) => {
-  card.style.setProperty('--delay', `${index * 0.1}s`);
 });

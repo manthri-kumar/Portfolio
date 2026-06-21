@@ -1,147 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projects | Kumar Manthri</title>
-
-<link rel="stylesheet" href="projects.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="icon" href="assist/mk-logo.png" type="image/png">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kumar Manthri - Projects - Full Stack & AI-powered software products.">
+  <meta name="theme-color" content="#050505">
+  <title>Projects - Kumar Manthri | Full Stack Developer</title>
+  <link rel="icon" href="assist/mk-logo.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="projects.css" />
 </head>
-
 <body>
 
-<header class="fade-up show">
+<!-- ==================== NAVBAR ==================== -->
+<header class="navbar-wrapper">
   <nav class="navbar">
-    <div class="logo">
-      <img src="assist/mk-logo.png">
+    <div class="navbar-left">
+      <a href="index.html" class="logo">
+        <img src="assist/mk-logo.png" alt="Kumar Manthri Logo">
+      </a>
     </div>
-
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="contact.html">Contact</a>
-      <a href="certificate.html">Certificates</a>
+    <div class="navbar-center">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="Projects.html" class="nav-link active">Projects</a></li>
+        <li><a href="certificate.html" class="nav-link">Certificates</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
     </div>
-
-    <div class="menu-toggle">
-      <i class="fa-solid fa-bars"></i>
+    <div class="navbar-right">
+      <a href="assist/certificate/KumarManthri.pdf" class="resume-btn" download>
+        <i class="fa-solid fa-download"></i>
+        <span>Resume</span>
+      </a>
+    </div>
+    <div class="menu-toggle" id="menuToggle">
+      <span></span><span></span><span></span>
     </div>
   </nav>
 </header>
 
-
-<section class="projects-section fade-up">
-
-  <!-- FILTER -->
-  <div class="filter-tabs">
-    <button class="tab active" data-filter="all">All</button>
-    <button class="tab" data-filter="completed">Completed</button>
-    <button class="tab" data-filter="progress">In Progress</button>
-    <button class="tab" data-filter="planned">Planned</button>
-  </div>
-
-  <!-- GRID -->
-  <div class="projects-grid">
-
-    <!-- Sarathi -->
-    <div class="project-card progress">
-      <img src="assist/SARATHI.png">
-      <div class="project-info">
-        <div class="title-row">
-          <h3>Sarathi</h3>
-          <span class="badge progress-badge">In Progress</span>
-        </div>
-        <p class="stack">React • Node.js • MongoDB • Google Maps API</p>
-        <p class="desc">
-          Smart travel assistant for trip planning & location-based suggestions.
-        </p>
-        <a class="link" href="#">Source code</a>
-      </div>
+<!-- ==================== HERO ==================== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">
+      <span>🚀</span>
+      <span>Featured Engineering Projects</span>
     </div>
-
-    <!-- Sanjevani -->
-    <div class="project-card progress">
-      <img src="assist/Sanjeevani.png">
-      <div class="project-info">
-        <div class="title-row">
-          <h3>Sanjevani</h3>
-          <span class="badge progress-badge">In Progress</span>
-        </div>
-        <p class="stack">React • Node.js • MongoDB</p>
-        <p class="desc">
-          Healthcare platform for appointments, records, and assistance.
-        </p>
-        <a class="link" href="#">Source code</a>
-      </div>
+    <h1 class="hero-title">Projects That Solve Real Problems</h1>
+    <p class="hero-subtitle">A collection of full stack applications, AI-powered solutions, and software products built to solve practical challenges and deliver meaningful user experiences.</p>
+    <div class="hero-metrics">
+      <div class="metric-item"><div class="metric-number">6+</div><div class="metric-label">Projects Built</div></div>
+      <div class="metric-item"><div class="metric-number">15+</div><div class="metric-label">Technologies</div></div>
+      <div class="metric-item"><div class="metric-number">10+</div><div class="metric-label">Certificates</div></div>
+      <div class="metric-item"><div class="metric-number">2026</div><div class="metric-label">Internship Ready</div></div>
     </div>
-
-    <!-- Daily Cart -->
-    <div class="project-card completed">
-      <img src="assist/d.png">
-      <div class="project-info">
-        <div class="title-row">
-          <h3>Daily Cart</h3>
-          <span class="badge completed-badge">Completed</span>
-        </div>
-        <p class="stack">HTML • CSS • JavaScript</p>
-        <p class="desc">
-          Grocery e-commerce platform with cart & checkout.
-        </p>
-        <a class="link" href="DCProject.html">Source code</a>
-      </div>
-    </div>
-
-    <!-- Calculator -->
-    <div class="project-card completed">
-      <img src="assist/HBG.png">
-      <div class="project-info">
-        <div class="title-row">
-          <h3>Gesture Calculator</h3>
-          <span class="badge completed-badge">Completed</span>
-        </div>
-        <p class="stack">Python • OpenCV</p>
-        <p class="desc">
-          Real-time calculator using hand gesture detection.
-        </p>
-        <a class="link" href="HBC.html">Source code</a>
-      </div>
-    </div>
-
-    <!-- Evento -->
-    <div class="project-card completed">
-      <img src="assist/evento.png">
-      <div class="project-info">
-        <div class="title-row">
-          <h3>Evento</h3>
-          <span class="badge completed-badge">Completed</span>
-        </div>
-        <p class="stack">HTML • CSS • JS</p>
-        <p class="desc">
-          Event management and booking platform.
-        </p>
-        <a class="link" href="Eventoproject.html">Source code</a>
-      </div>
-    </div>
-
-    <!-- CLI -->
-    <div class="project-card planned">
-      <img src="assist/image.png">
-      <div class="project-info">
-        <div class="title-row">
-          <h3>TravelMate CLI</h3>
-        </div>
-        <p class="stack">C Programming</p>
-        <p class="desc">
-          Command-line travel assistant tool.
-        </p>
-        <a class="link" href="#">Source code</a>
-      </div>
-    </div>
-
   </div>
 </section>
+
+<!-- ==================== FILTER ==================== -->
+<section class="filter-section">
+  <div class="container">
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+      <button class="filter-btn" data-filter="aiml">AI/ML</button>
+      <button class="filter-btn" data-filter="webapp">Web Applications</button>
+      <button class="filter-btn" data-filter="progress">In Progress</button>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PROJECTS GRID ==================== -->
+<section class="projects-grid-section">
+  <div class="container">
+    <div class="projects-grid">
+
+      <!-- Sarathi — In Progress, no live demo yet -->
+      <div class="project-card" data-category="fullstack aiml progress">
+        <div class="card-status in-progress">In Progress</div>
+        <div class="card-image">
+          <img src="assist/SARATHI.png" alt="Sarathi Project" loading="lazy">
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Sarathi</h3>
+          <p class="card-tagline">AI-powered spiritual travel companion</p>
+          <p class="card-desc">Smart temple discovery and pilgrimage planning platform with intelligent route suggestions and personalized recommendations.</p>
+          <ul class="card-features">
+            <li>Real-time temple discovery via Google Places API</li>
+            <li>AI-powered itinerary generation and cost estimation</li>
+            <li>Personalized travel recommendations</li>
+          </ul>
+          <div class="card-tech">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">Firebase</span>
+            <span class="tech-tag">Gemini AI</span>
+          </div>
+          <div class="card-actions">
+            <!-- No live demo yet — show disabled Coming Soon -->
+            <button class="btn btn-coming-soon" disabled>
+              <i class="fa-solid fa-clock"></i>
+              <span>Coming Soon</span>
+            </button>
+            <a href="https://github.com/manthri-kumar" target="_blank" rel="noopener" class="btn btn-secondary">
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sanjevani — In Progress -->
+      <div class="project-card" data-category="fullstack progress">
+        <div class="card-status in-progress">In Progress</div>
+        <div class="card-image">
+          <img src="assist/Sanjeevani.png" alt="Sanjevani Project" loading="lazy">
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Sanjevani</h3>
+          <p class="card-tagline">Digital healthcare assistance platform</p>
+          <p class="card-desc">Healthcare platform that streamlines appointments, medical records management, and patient support services.</p>
+          <ul class="card-features">
+            <li>Appointment scheduling and management</li>
+            <li>Digital medical records system</li>
+            <li>Healthcare guidance and support</li>
+          </ul>
+          <div class="card-tech">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">Express</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-coming-soon" disabled>
+              <i class="fa-solid fa-clock"></i>
+              <span>Coming Soon</span>
+            </button>
+            <a href="https://github.com/manthri-kumar" target="_blank" rel="noopener" class="btn btn-secondary">
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Daily Cart — Completed, has project page -->
+      <div class="project-card" data-category="fullstack webapp">
+        <div class="card-status completed">Completed</div>
+        <div class="card-image">
+          <img src="assist/d.png" alt="Daily Cart Project" loading="lazy">
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Daily Cart</h3>
+          <p class="card-tagline">Modern grocery e-commerce platform</p>
+          <p class="card-desc">Full-featured online shopping platform with product browsing, cart management, and seamless checkout workflow.</p>
+          <ul class="card-features">
+            <li>Product catalog with search and filtering</li>
+            <li>Shopping cart with persistent storage</li>
+            <li>Complete checkout workflow</li>
+          </ul>
+          <div class="card-tech">
+            <span class="tech-tag">HTML5</span>
+            <span class="tech-tag">CSS3</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">LocalStorage</span>
+          </div>
+          <div class="card-actions">
+            <a href="DCProject.html" class="btn btn-primary">
+              <span>View Project</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="https://github.com/manthri-kumar" target="_blank" rel="noopener" class="btn btn-secondary">
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gesture Calculator — Completed, has project page -->
+      <div class="project-card" data-category="aiml">
+        <div class="card-status completed">Completed</div>
+        <div class="card-image">
+          <img src="assist/HBG.png" alt="Gesture Calculator" loading="lazy">
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Gesture Calculator</h3>
+          <p class="card-tagline">Touchless calculator using computer vision</p>
+          <p class="card-desc">Real-time hand gesture recognition system that performs mathematical operations through camera-based interaction.</p>
+          <ul class="card-features">
+            <li>Real-time hand gesture detection</li>
+            <li>Mathematical operation recognition</li>
+            <li>Live camera feed processing</li>
+          </ul>
+          <div class="card-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">OpenCV</span>
+            <span class="tech-tag">MediaPipe</span>
+          </div>
+          <div class="card-actions">
+            <a href="HBC.html" class="btn btn-primary">
+              <span>View Project</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="https://github.com/manthri-kumar" target="_blank" rel="noopener" class="btn btn-secondary">
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Evento — Completed, has project page -->
+      <div class="project-card" data-category="fullstack webapp">
+        <div class="card-status completed">Completed</div>
+        <div class="card-image">
+          <img src="assist/evento.png" alt="Evento Project" loading="lazy">
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Evento</h3>
+          <p class="card-tagline">Event management and booking solution</p>
+          <p class="card-desc">Platform for event discovery, booking, scheduling, and management with modern UI and user-friendly experience.</p>
+          <ul class="card-features">
+            <li>Event discovery and browsing</li>
+            <li>Booking and scheduling system</li>
+            <li>Event management dashboard</li>
+          </ul>
+          <div class="card-tech">
+            <span class="tech-tag">HTML5</span>
+            <span class="tech-tag">CSS3</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+          <div class="card-actions">
+            <a href="Eventoproject.html" class="btn btn-primary">
+              <span>View Project</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="https://github.com/manthri-kumar" target="_blank" rel="noopener" class="btn btn-secondary">
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- TravelMate CLI — Planned -->
+      <div class="project-card" data-category="webapp">
+        <div class="card-status planned">Planned</div>
+        <div class="card-image">
+          <img src="assist/image.png" alt="TravelMate CLI" loading="lazy">
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">TravelMate CLI</h3>
+          <p class="card-tagline">Terminal-based travel assistant</p>
+          <p class="card-desc">Command-line travel planning tool designed to assist users with travel information and recommendations.</p>
+          <ul class="card-features">
+            <li>Travel information retrieval</li>
+            <li>Trip planning recommendations</li>
+            <li>Command-line interface</li>
+          </ul>
+          <div class="card-tech">
+            <span class="tech-tag">C Programming</span>
+            <span class="tech-tag">CLI</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-coming-soon" disabled>
+              <i class="fa-solid fa-clock"></i>
+              <span>Coming Soon</span>
+            </button>
+            <a href="https://github.com/manthri-kumar" target="_blank" rel="noopener" class="btn btn-secondary">
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== GITHUB SECTION ==================== -->
+<section class="github-section">
+  <div class="container">
+    <h2 class="section-title">Building Consistently, Learning Continuously</h2>
+    <p class="section-subtitle">Active development, open source contributions, and consistent coding habits.</p>
+    <div class="github-metrics">
+      <div class="github-item"><div class="gh-icon"><i class="fa-solid fa-code-commit"></i></div><h3>300+</h3><p>GitHub Commits</p></div>
+      <div class="github-item"><div class="gh-icon"><i class="fa-solid fa-calendar-check"></i></div><h3>Daily</h3><p>Coding Habit</p></div>
+      <div class="github-item"><div class="gh-icon"><i class="fa-brands fa-git-alt"></i></div><h3>6+</h3><p>Active Projects</p></div>
+    </div>
+    <a href="https://github.com/manthri-kumar" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+      <i class="fa-brands fa-github"></i>
+      <span>Visit GitHub Profile</span>
+      <i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+</section>
+
+<!-- ==================== CTA ==================== -->
+<section class="cta-section">
+  <div class="container">
+    <h2 class="cta-title">Interested in Working Together?</h2>
+    <p class="cta-subtitle">I'm actively seeking software engineering and full stack development internship opportunities where I can contribute, learn, and build impactful products.</p>
+    <div class="cta-buttons">
+      <a href="assist/certificate/KumarManthri.pdf" class="btn btn-primary btn-lg" download>
+        <i class="fa-solid fa-download"></i>
+        <span>Download Resume</span>
+      </a>
+      <a href="https://www.linkedin.com/in/kumar-manthri-8479bb32a/" target="_blank" class="btn btn-secondary btn-lg">
+        <i class="fa-brands fa-linkedin"></i>
+        <span>Connect on LinkedIn</span>
+      </a>
+      <a href="contact.html" class="btn btn-secondary btn-lg">
+        <i class="fa-solid fa-envelope"></i>
+        <span>Contact Me</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-left">
+        <img src="assist/mk-logo.png" alt="Kumar Manthri" class="footer-logo">
+        <p>Full Stack Developer | AI Enthusiast | Open to Opportunities</p>
+      </div>
+      <div class="footer-center">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Projects.html">Projects</a></li>
+          <li><a href="certificate.html">Certificates</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-right">
+        <h4>Follow</h4>
+        <div class="footer-socials">
+          <a href="https://github.com/manthri-kumar" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/kumar-manthri-8479bb32a/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Kumar Manthri. All rights reserved.</p>
+      <p>Built with <span class="heart">♥</span> using HTML, CSS & JavaScript</p>
+    </div>
+  </div>
+</footer>
 
 <script src="project.js"></script>
 </body>

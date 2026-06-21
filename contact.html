@@ -1,57 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact Me - Dark Theme</title>
-  <link rel="stylesheet" href="contact.css">
-    <link rel="icon" href="assist/mk-logo.png" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kumar Manthri - Contact - Full Stack Developer open to internships and collaborations.">
+  <meta name="theme-color" content="#050505">
+  <title>Contact - Kumar Manthri | Full Stack Developer</title>
+  <link rel="icon" href="assist/mk-logo.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="contact.css" />
 </head>
 <body>
 
-  <header>
-    <div class="logo">
-      <img src="assist/mk-logo.png" alt="KM Logo">
+<!-- ==================== NAVBAR ==================== -->
+<header class="navbar-wrapper">
+  <nav class="navbar">
+    <div class="navbar-left">
+      <a href="index.html" class="logo">
+        <img src="assist/mk-logo.png" alt="Kumar Manthri Logo">
+      </a>
     </div>
-
-    <div class="hamburger">&#9776;</div> <!-- hamburger icon -->
-
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="certificate.html">Certificates</a>
-    </nav>
-  </header>
-
-  <section class="contact">
-    <h2>Contact Me</h2>
-    <div class="underline"></div>
-    <p>Feel free to Contact me by submitting the form below and I will get back to you as soon as possible</p>
-
-    <form action="https://formspree.io/f/mldjaydq" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-
-    <!-- Social Media Icons -->
-    <div class="social-icons">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="https://www.instagram.com/manthri._.kumar/"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.linkedin.com/in/kumar-manthri-8479bb32a/"><i class="fab fa-linkedin-in"></i></a>
+    <div class="navbar-center">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="Projects.html" class="nav-link">Projects</a></li>
+        <li><a href="certificate.html" class="nav-link">Certificates</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+      </ul>
     </div>
-  </section>
-  
+    <div class="navbar-right">
+      <a href="assist/certificate/KumarManthri.pdf" class="resume-btn" download>
+        <i class="fa-solid fa-download"></i>
+        <span>Resume</span>
+      </a>
+    </div>
+    <div class="menu-toggle" id="menuToggle">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+</header>
 
+<!-- ==================== HERO ==================== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">
+      <span>✉️</span>
+      <span>Get In Touch</span>
+    </div>
+    <h1 class="hero-title">Let's Build Something <span class="accent">Together</span></h1>
+    <p class="hero-subtitle">Open to internships, collaborations, software engineering opportunities, and exciting projects.</p>
+  </div>
+</section>
+
+<!-- ==================== CONTACT LAYOUT ==================== -->
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- LEFT: Info Card -->
+      <div class="contact-info-card">
+        <div class="info-header">
+          <h2>Contact Information</h2>
+          <p>Reach out through any of these channels. I typically respond within 24 hours.</p>
+        </div>
+
+        <div class="info-rows">
+          <a href="mailto:manthrikumar7@gmail.com" class="info-row">
+            <div class="info-icon">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="info-text">
+              <span class="info-label">Email</span>
+              <span class="info-value">manthrikumar7@gmail.com</span>
+            </div>
+            <i class="fa-solid fa-arrow-right info-arrow"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/kumar-manthri-8479bb32a/" target="_blank" class="info-row">
+            <div class="info-icon">
+              <i class="fa-brands fa-linkedin"></i>
+            </div>
+            <div class="info-text">
+              <span class="info-label">LinkedIn</span>
+              <span class="info-value">Kumar Manthri</span>
+            </div>
+            <i class="fa-solid fa-arrow-right info-arrow"></i>
+          </a>
+
+          <a href="https://github.com/manthri-kumar" target="_blank" class="info-row">
+            <div class="info-icon">
+              <i class="fa-brands fa-github"></i>
+            </div>
+            <div class="info-text">
+              <span class="info-label">GitHub</span>
+              <span class="info-value">manthri-kumar</span>
+            </div>
+            <i class="fa-solid fa-arrow-right info-arrow"></i>
+          </a>
+
+          <div class="info-row no-link">
+            <div class="info-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="info-text">
+              <span class="info-label">Location</span>
+              <span class="info-value">Andhra Pradesh, India</span>
+            </div>
+          </div>
+
+          <div class="info-row no-link availability">
+            <div class="info-icon green">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <div class="info-text">
+              <span class="info-label">Status</span>
+              <span class="info-value green-text">Open to Internships</span>
+            </div>
+            <span class="pulse-dot"></span>
+          </div>
+        </div>
+
+        <!-- Social Buttons -->
+        <div class="social-section">
+          <p class="social-label">Also find me on</p>
+          <div class="social-buttons">
+            <a href="https://github.com/manthri-kumar" target="_blank" class="social-btn" title="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/kumar-manthri-8479bb32a/" target="_blank" class="social-btn" title="LinkedIn">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="mailto:manthrikumar7@gmail.com" class="social-btn" title="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="https://leetcode.com/u/manthri_kumar/" target="_blank" class="social-btn" title="LeetCode">
+              <i class="fa-solid fa-code"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Form Card -->
+      <div class="contact-form-card">
+        <div class="form-header">
+          <h2>Send a Message</h2>
+          <p>Fill out the form and I'll get back to you as soon as possible.</p>
+        </div>
+
+        <form class="contact-form" action="https://formspree.io/f/mldjaydq" method="POST" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" required autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me about your project or opportunity..." rows="6" required></textarea>
+          </div>
+
+          <button type="submit" class="send-btn" id="sendBtn">
+            <span class="btn-text">
+              <i class="fa-solid fa-paper-plane"></i>
+              Send Message
+            </span>
+            <span class="btn-loading" style="display:none;">
+              <i class="fa-solid fa-spinner fa-spin"></i>
+              Sending...
+            </span>
+            <span class="btn-success" style="display:none;">
+              <i class="fa-solid fa-check"></i>
+              Message Sent!
+            </span>
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-left">
+        <img src="assist/mk-logo.png" alt="Kumar Manthri" class="footer-logo">
+        <p>Full Stack Developer | AI Enthusiast | Continuous Learner</p>
+      </div>
+      <div class="footer-center">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Projects.html">Projects</a></li>
+          <li><a href="certificate.html">Certificates</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-right">
+        <h4>Follow</h4>
+        <div class="footer-socials">
+          <a href="https://github.com/manthri-kumar" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/kumar-manthri-8479bb32a/" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Kumar Manthri. All rights reserved.</p>
+      <p>Built with <span class="heart">♥</span> using HTML, CSS & JavaScript</p>
+    </div>
+  </div>
+</footer>
+
+<script src="contact-new.js"></script>
 </body>
-<script>
-  const hamburger = document.querySelector('.hamburger');
-  const navLinks = document.querySelector('.nav-links');
-
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
-</script>
 </html>
