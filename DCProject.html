@@ -1,102 +1,607 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Cart - Kumar Manthri</title>
-    <link rel="icon" href="assist/dc.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="DCProject.css">
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Daily Cart — Modern Grocery Shopping Platform built by Kumar Manthri. Full-stack e-commerce with JWT auth, real-time cart, and MySQL backend.">
+  <meta name="theme-color" content="#050505">
+  <title>Daily Cart — Kumar Manthri | Full Stack Developer</title>
+  <link rel="icon" href="assist/dc.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="DCProject.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1 class="logo">Kumar Manthri</h1>
-            <nav>
-                <a href="#about">About</a>
-                <a href="#technologies">Technologies</a>
-                <a href="#features">Features</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
-    </header>
 
-    <section class="hero" id="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2 class="project-title">Daily Cart</h2>
-                <p class="tagline">Your daily grocery shopping made easy and efficient.</p>
-                <br>
-                <div class="btn-group">
-                    <a href="https://github.com/manthri-kumar/Daily-Cart" target="_blank" class="cta-btn">GitHub</a>
-                    <a href="https://daily-cart-twy6.vercel.app" target="_blank" class="cta-btn">Live Demo</a>
-                </div>
-                
+<!-- ==================== NAVBAR ==================== -->
+<header class="navbar-wrapper">
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <a href="index.html">
+        <img src="assist/mk-logo.png" alt="Kumar Manthri" class="nav-logo-img">
+      </a>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#overview" class="nav-link">Overview</a></li>
+      <li><a href="#stack" class="nav-link">Tech Stack</a></li>
+      <li><a href="#features" class="nav-link">Features</a></li>
+      <li><a href="#architecture" class="nav-link">Architecture</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="assist/certificate/KumarManthri.pdf" class="resume-btn" download>
+        <i class="fa-solid fa-download"></i>
+        Resume
+      </a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero" id="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="container hero-container">
+
+    <!-- Left -->
+    <div class="hero-left">
+      <a href="Projects.html" class="back-link">
+        <i class="fa-solid fa-arrow-left"></i>
+        All Projects
+      </a>
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Featured Project
+      </div>
+      <h1 class="hero-title">Daily Cart</h1>
+      <p class="hero-tagline">Modern Grocery Shopping Platform</p>
+      <p class="hero-desc">
+        Daily Cart is a full-stack grocery e-commerce platform that simplifies product discovery, cart management, and secure online shopping through an intuitive and responsive user experience.
+      </p>
+      <div class="hero-actions">
+        <a href="https://github.com/manthri-kumar/Daily-Cart" target="_blank" rel="noopener" class="btn btn-secondary">
+          <i class="fa-brands fa-github"></i>
+          View Source Code
+        </a>
+        <a href="https://daily-cart-twy6.vercel.app" target="_blank" rel="noopener" class="btn btn-primary">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          Live Demo
+        </a>
+      </div>
+      <div class="hero-metrics">
+        <div class="metric">
+          <span class="metric-val" data-count="20">0</span><span class="metric-plus">+</span>
+          <span class="metric-lbl">Products</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric">
+          <span class="metric-val">100%</span>
+          <span class="metric-lbl">Responsive</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric">
+          <span class="metric-val">JWT</span>
+          <span class="metric-lbl">Authentication</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric">
+          <span class="metric-val">Live</span>
+          <span class="metric-lbl">Cart Updates</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Dashboard Preview -->
+    <div class="hero-right">
+      <div class="dashboard-preview">
+        <div class="dash-header">
+          <div class="dash-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <span class="dash-title">daily-cart.app</span>
+        </div>
+
+        <div class="dash-body">
+          <!-- Top stat row -->
+          <div class="dash-stats">
+            <div class="dash-stat">
+              <i class="fa-solid fa-box-open"></i>
+              <div>
+                <span class="ds-val">24</span>
+                <span class="ds-lbl">Products</span>
+              </div>
             </div>
-        </div>
-    </section>
-
-    <section class="about" id="about">
-        <div class="container about-container">
-            <div class="project-image">
-                <img src="assist/Daily Cart.png" alt="Daily Cart Project" />
+            <div class="dash-stat accent">
+              <i class="fa-solid fa-tags"></i>
+              <div>
+                <span class="ds-val">6</span>
+                <span class="ds-lbl">Categories</span>
+              </div>
             </div>
-            <div class="about-content">
-                <h2>About the Project</h2>
-                <p>The Daily Cart is a sleek e-commerce platform designed for online grocery shopping. It offers a seamless shopping experience with a dynamic cart system, secure checkout, and an intuitive user interface.</p>
+            <div class="dash-stat">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <div>
+                <span class="ds-val">3</span>
+                <span class="ds-lbl">In Cart</span>
+              </div>
             </div>
-        </div>
-    </section>
+          </div>
 
-    <section class="technologies" id="technologies">
-        <div class="container">
-            <h2>Technologies Used</h2>
-            <ul class="tech-list">
-                <li>HTML, CSS, JavaScript</li>
-                <li>Node.js (Backend)</li>
-                <li>MySQL (Database)</li>
-                <li>JWT Authentication</li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="features" id="features">
-        <div class="container">
-            <h2>Key Features</h2>
-            <div class="feature-list">
-                <div class="feature">
-                    <h3>Product Categories</h3>
-                    <p>Browse through different categories like fruits, vegetables, dairy, and more.</p>
-                </div>
-                <div class="feature">
-                    <h3>Dynamic Cart</h3>
-                    <p>Real-time updates to your shopping cart as you add items.</p>
-                </div>
-                <div class="feature">
-                    <h3>Secure Checkout</h3>
-                    <p>Fast, secure, and easy payment options for a smooth checkout experience.</p>
-                </div>
-                <div class="feature">
-                    <h3>Responsive Design</h3>
-                    <p>Works seamlessly across all devices – from desktops to mobile phones.</p>
-                </div>
+          <!-- Product grid preview -->
+          <div class="dash-section-label">Products</div>
+          <div class="dash-products">
+            <div class="dash-product">
+              <div class="dp-icon fruits">🍎</div>
+              <div class="dp-info">
+                <span class="dp-name">Fresh Apples</span>
+                <span class="dp-price">₹80</span>
+              </div>
+              <button class="dp-add">+</button>
             </div>
-        </div>
-    </section>
+            <div class="dash-product">
+              <div class="dp-icon veggies">🥦</div>
+              <div class="dp-info">
+                <span class="dp-name">Broccoli</span>
+                <span class="dp-price">₹60</span>
+              </div>
+              <button class="dp-add">+</button>
+            </div>
+            <div class="dash-product">
+              <div class="dp-icon dairy">🥛</div>
+              <div class="dp-info">
+                <span class="dp-name">Milk 1L</span>
+                <span class="dp-price">₹55</span>
+              </div>
+              <button class="dp-add active">✓</button>
+            </div>
+          </div>
 
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2>Get in Touch</h2>
-            <p>If you'd like to learn more about the Daily Cart project or have any questions, feel free to reach out!</p>
-            <a href="mailto:kumar@example.com" class="cta-btn">Contact Me</a>
+          <!-- Auth indicator -->
+          <div class="dash-auth">
+            <div class="auth-left">
+              <div class="auth-avatar">KM</div>
+              <div>
+                <span class="auth-name">Kumar M.</span>
+                <span class="auth-status"><span class="auth-dot"></span>Authenticated</span>
+              </div>
+            </div>
+            <div class="auth-badge">JWT</div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Kumar Manthri. All Rights Reserved.</p>
+  </div>
+</section>
+
+<!-- ==================== OVERVIEW ==================== -->
+<section class="overview-section section" id="overview">
+  <div class="container">
+    <div class="section-label">Project Overview</div>
+    <h2 class="section-title">Why Daily Cart?</h2>
+    <div class="overview-grid">
+      <div class="overview-card reveal">
+        <div class="ov-icon"><i class="fa-solid fa-circle-exclamation"></i></div>
+        <h3>Problem Statement</h3>
+        <p>Traditional grocery shopping platforms often suffer from poor usability, cluttered interfaces, and inconsistent shopping experiences that frustrate users and reduce conversion rates.</p>
+      </div>
+      <div class="overview-card reveal" style="--delay:0.1s">
+        <div class="ov-icon accent"><i class="fa-solid fa-circle-check"></i></div>
+        <h3>Solution</h3>
+        <p>Daily Cart provides a clean, responsive, and scalable shopping experience with secure JWT authentication and real-time cart updates — making online grocery shopping effortless.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== TECH STACK ==================== -->
+<section class="stack-section section" id="stack">
+  <div class="container">
+    <div class="section-label">Technologies</div>
+    <h2 class="section-title">Tech Stack</h2>
+    <p class="section-sub">Built with modern web technologies chosen for performance, security, and developer experience.</p>
+    <div class="stack-grid">
+      <div class="stack-item reveal">
+        <div class="stack-icon html"><i class="fa-brands fa-html5"></i></div>
+        <span class="stack-name">HTML5</span>
+        <span class="stack-role">Structure</span>
+      </div>
+      <div class="stack-item reveal" style="--delay:0.05s">
+        <div class="stack-icon css"><i class="fa-brands fa-css3-alt"></i></div>
+        <span class="stack-name">CSS3</span>
+        <span class="stack-role">Styling</span>
+      </div>
+      <div class="stack-item reveal" style="--delay:0.1s">
+        <div class="stack-icon js"><i class="fa-brands fa-js"></i></div>
+        <span class="stack-name">JavaScript</span>
+        <span class="stack-role">Logic</span>
+      </div>
+      <div class="stack-item reveal" style="--delay:0.15s">
+        <div class="stack-icon node"><i class="fa-brands fa-node-js"></i></div>
+        <span class="stack-name">Node.js</span>
+        <span class="stack-role">Backend</span>
+      </div>
+      <div class="stack-item reveal" style="--delay:0.2s">
+        <div class="stack-icon mysql"><i class="fa-solid fa-database"></i></div>
+        <span class="stack-name">MySQL</span>
+        <span class="stack-role">Database</span>
+      </div>
+      <div class="stack-item reveal" style="--delay:0.25s">
+        <div class="stack-icon jwt"><i class="fa-solid fa-lock"></i></div>
+        <span class="stack-name">JWT</span>
+        <span class="stack-role">Auth</span>
+      </div>
+    </div>
+    <!-- Pill chips row -->
+    <div class="stack-chips">
+      <span class="chip">HTML</span>
+      <span class="chip">CSS</span>
+      <span class="chip">JavaScript</span>
+      <span class="chip">Node.js</span>
+      <span class="chip">MySQL</span>
+      <span class="chip">JWT</span>
+      <span class="chip">REST API</span>
+      <span class="chip">LocalStorage</span>
+      <span class="chip">Vercel</span>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== ARCHITECTURE ==================== -->
+<section class="arch-section section" id="architecture">
+  <div class="container">
+    <div class="section-label">System Design</div>
+    <h2 class="section-title">Architecture</h2>
+    <p class="section-sub">A layered full-stack architecture ensuring separation of concerns, security, and scalability.</p>
+    <div class="arch-flow">
+      <div class="arch-node reveal">
+        <div class="arch-icon"><i class="fa-solid fa-display"></i></div>
+        <div class="arch-info">
+          <h4>User Interface</h4>
+          <p>HTML · CSS · JavaScript</p>
         </div>
-    </footer>
+        <div class="arch-tag">Frontend</div>
+      </div>
+      <div class="arch-connector reveal" style="--delay:0.05s">
+        <div class="connector-line"></div>
+        <div class="connector-dot"></div>
+        <span class="connector-label">HTTP Request</span>
+      </div>
+      <div class="arch-node reveal" style="--delay:0.1s">
+        <div class="arch-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <div class="arch-info">
+          <h4>Authentication Layer</h4>
+          <p>JWT Token Verification</p>
+        </div>
+        <div class="arch-tag accent">Security</div>
+      </div>
+      <div class="arch-connector reveal" style="--delay:0.15s">
+        <div class="connector-line"></div>
+        <div class="connector-dot"></div>
+        <span class="connector-label">Validated Request</span>
+      </div>
+      <div class="arch-node reveal" style="--delay:0.2s">
+        <div class="arch-icon"><i class="fa-brands fa-node-js"></i></div>
+        <div class="arch-info">
+          <h4>Node.js Backend</h4>
+          <p>Express · REST API · Business Logic</p>
+        </div>
+        <div class="arch-tag">Backend</div>
+      </div>
+      <div class="arch-connector reveal" style="--delay:0.25s">
+        <div class="connector-line"></div>
+        <div class="connector-dot"></div>
+        <span class="connector-label">SQL Query</span>
+      </div>
+      <div class="arch-node reveal" style="--delay:0.3s">
+        <div class="arch-icon"><i class="fa-solid fa-database"></i></div>
+        <div class="arch-info">
+          <h4>MySQL Database</h4>
+          <p>Products · Users · Orders</p>
+        </div>
+        <div class="arch-tag">Data</div>
+      </div>
+      <div class="arch-connector reveal" style="--delay:0.35s">
+        <div class="connector-line"></div>
+        <div class="connector-dot"></div>
+        <span class="connector-label">Process</span>
+      </div>
+      <div class="arch-node reveal" style="--delay:0.4s">
+        <div class="arch-icon"><i class="fa-solid fa-bag-shopping"></i></div>
+        <div class="arch-info">
+          <h4>Order Processing</h4>
+          <p>Cart Validation · Confirmation</p>
+        </div>
+        <div class="arch-tag accent">Output</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FEATURES ==================== -->
+<section class="features-section section" id="features">
+  <div class="container">
+    <div class="section-label">Capabilities</div>
+    <h2 class="section-title">Key Features</h2>
+    <p class="section-sub">Every feature is built with usability and performance in mind.</p>
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <div class="fc-icon"><i class="fa-solid fa-layer-group"></i></div>
+        <h3>Product Categories</h3>
+        <p>Browse through organized categories — fruits, vegetables, dairy, snacks, and more — for effortless product discovery.</p>
+        <div class="fc-tags">
+          <span>UX Design</span>
+          <span>Filtering</span>
+        </div>
+      </div>
+      <div class="feature-card reveal" style="--delay:0.1s">
+        <div class="fc-icon"><i class="fa-solid fa-cart-plus"></i></div>
+        <h3>Dynamic Cart</h3>
+        <p>Real-time cart updates using LocalStorage — items persist across sessions with instant quantity management.</p>
+        <div class="fc-tags">
+          <span>LocalStorage</span>
+          <span>Real-time</span>
+        </div>
+      </div>
+      <div class="feature-card reveal" style="--delay:0.2s">
+        <div class="fc-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>Secure Checkout</h3>
+        <p>JWT-protected checkout flow with secure user sessions ensures every transaction is authenticated and safe.</p>
+        <div class="fc-tags">
+          <span>JWT</span>
+          <span>Security</span>
+        </div>
+      </div>
+      <div class="feature-card reveal" style="--delay:0.3s">
+        <div class="fc-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+        <h3>Responsive Design</h3>
+        <p>Pixel-perfect across all screen sizes — from 320px mobile phones to 4K desktop monitors.</p>
+        <div class="fc-tags">
+          <span>Mobile First</span>
+          <span>CSS Grid</span>
+        </div>
+      </div>
+      <div class="feature-card reveal" style="--delay:0.4s">
+        <div class="fc-icon"><i class="fa-solid fa-user-lock"></i></div>
+        <h3>JWT Authentication</h3>
+        <p>Stateless authentication with signed tokens — secure login, registration, and protected route access.</p>
+        <div class="fc-tags">
+          <span>Auth</span>
+          <span>Node.js</span>
+        </div>
+      </div>
+      <div class="feature-card reveal" style="--delay:0.5s">
+        <div class="fc-icon"><i class="fa-solid fa-database"></i></div>
+        <h3>MySQL Backend</h3>
+        <p>Relational database storing product catalog, user accounts, and order history with optimized queries.</p>
+        <div class="fc-tags">
+          <span>SQL</span>
+          <span>REST API</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== DEVELOPMENT JOURNEY ==================== -->
+<section class="journey-section section">
+  <div class="container">
+    <div class="section-label">Process</div>
+    <h2 class="section-title">Development Journey</h2>
+    <p class="section-sub">From concept to deployment — the full engineering lifecycle.</p>
+    <div class="journey-timeline">
+      <div class="jt-item reveal">
+        <div class="jt-node"><span>01</span></div>
+        <div class="jt-content">
+          <h4>Planning</h4>
+          <p>Defined project scope, user stories, and database schema. Wireframed core flows — browse, cart, checkout.</p>
+        </div>
+      </div>
+      <div class="jt-item reveal" style="--delay:0.1s">
+        <div class="jt-node"><span>02</span></div>
+        <div class="jt-content">
+          <h4>UI Design</h4>
+          <p>Designed responsive layouts with a dark-themed, product-first visual language using CSS custom properties.</p>
+        </div>
+      </div>
+      <div class="jt-item reveal" style="--delay:0.2s">
+        <div class="jt-node"><span>03</span></div>
+        <div class="jt-content">
+          <h4>Frontend Development</h4>
+          <p>Built all pages with vanilla HTML, CSS, and JavaScript — product cards, filters, and dynamic cart UI.</p>
+        </div>
+      </div>
+      <div class="jt-item reveal" style="--delay:0.3s">
+        <div class="jt-node"><span>04</span></div>
+        <div class="jt-content">
+          <h4>Backend Integration</h4>
+          <p>Developed Node.js REST API with Express, connected MySQL database, and implemented JWT auth middleware.</p>
+        </div>
+      </div>
+      <div class="jt-item reveal" style="--delay:0.4s">
+        <div class="jt-node"><span>05</span></div>
+        <div class="jt-content">
+          <h4>Testing</h4>
+          <p>Manual end-to-end testing of user flows, API endpoints, authentication edge cases, and responsive breakpoints.</p>
+        </div>
+      </div>
+      <div class="jt-item reveal" style="--delay:0.5s">
+        <div class="jt-node"><span>06</span></div>
+        <div class="jt-content">
+          <h4>Deployment</h4>
+          <p>Frontend deployed to Vercel with automatic CI/CD. Backend hosted on cloud with environment-based config.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CHALLENGES ==================== -->
+<section class="challenges-section section">
+  <div class="container">
+    <div class="section-label">Engineering</div>
+    <h2 class="section-title">Challenges & Learnings</h2>
+    <p class="section-sub">Real problems encountered and how they were solved.</p>
+    <div class="challenges-grid">
+      <div class="challenge-card reveal">
+        <div class="ch-header">
+          <span class="ch-badge challenge">Challenge</span>
+          <i class="fa-solid fa-triangle-exclamation"></i>
+        </div>
+        <h4>Managing Cart State</h4>
+        <p>Maintaining consistent cart state across page navigations without a framework was complex and error-prone.</p>
+        <div class="ch-learning">
+          <span class="ch-badge learning">Learning</span>
+          <p>Implemented efficient client-side state management using LocalStorage with a centralized cart module, enabling persistent state across sessions.</p>
+        </div>
+      </div>
+      <div class="challenge-card reveal" style="--delay:0.1s">
+        <div class="ch-header">
+          <span class="ch-badge challenge">Challenge</span>
+          <i class="fa-solid fa-triangle-exclamation"></i>
+        </div>
+        <h4>Authentication Flow</h4>
+        <p>Building secure stateless authentication from scratch without third-party libraries required deep understanding of token-based auth.</p>
+        <div class="ch-learning">
+          <span class="ch-badge learning">Learning</span>
+          <p>Gained deep expertise in JWT implementation — signing, verifying, and invalidating tokens — plus secure storage patterns on the client.</p>
+        </div>
+      </div>
+      <div class="challenge-card reveal" style="--delay:0.2s">
+        <div class="ch-header">
+          <span class="ch-badge challenge">Challenge</span>
+          <i class="fa-solid fa-triangle-exclamation"></i>
+        </div>
+        <h4>Database Communication</h4>
+        <p>Designing efficient SQL queries for product filtering, user lookups, and order creation while avoiding N+1 problems.</p>
+        <div class="ch-learning">
+          <span class="ch-badge learning">Learning</span>
+          <p>Learned backend integration best practices — parameterized queries, connection pooling, and proper API response shaping with Node.js.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== ROADMAP ==================== -->
+<section class="roadmap-section section">
+  <div class="container">
+    <div class="section-label">Future</div>
+    <h2 class="section-title">Roadmap</h2>
+    <p class="section-sub">Planned features and enhancements for future versions.</p>
+    <div class="roadmap-grid">
+      <div class="roadmap-card reveal">
+        <div class="rm-icon"><i class="fa-solid fa-heart"></i></div>
+        <h4>Wishlist</h4>
+        <p>Save products for later with a persistent user wishlist synced to the backend.</p>
+        <span class="rm-status planned">Planned</span>
+      </div>
+      <div class="roadmap-card reveal" style="--delay:0.08s">
+        <div class="rm-icon"><i class="fa-solid fa-truck-fast"></i></div>
+        <h4>Order Tracking</h4>
+        <p>Real-time order status updates with live delivery tracking and SMS notifications.</p>
+        <span class="rm-status planned">Planned</span>
+      </div>
+      <div class="roadmap-card reveal" style="--delay:0.16s">
+        <div class="rm-icon"><i class="fa-solid fa-credit-card"></i></div>
+        <h4>Payment Gateway</h4>
+        <p>Razorpay or Stripe integration for real payment processing with refund support.</p>
+        <span class="rm-status planned">Planned</span>
+      </div>
+      <div class="roadmap-card reveal" style="--delay:0.24s">
+        <div class="rm-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <h4>Admin Dashboard</h4>
+        <p>Full product, inventory, and order management panel for store administrators.</p>
+        <span class="rm-status planned">Planned</span>
+      </div>
+      <div class="roadmap-card reveal" style="--delay:0.32s">
+        <div class="rm-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        <h4>AI Recommendations</h4>
+        <p>Personalized product suggestions using purchase history and collaborative filtering.</p>
+        <span class="rm-status future">Future</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CONTACT / CTA ==================== -->
+<section class="cta-section section" id="contact">
+  <div class="container">
+    <div class="cta-card reveal">
+      <div class="cta-glow"></div>
+      <div class="cta-content">
+        <div class="section-label center">Let's Connect</div>
+        <h2>Interested in This Project?</h2>
+        <p>Explore the source code, try the live demo, or connect with me for collaboration opportunities.</p>
+        <div class="cta-actions">
+          <a href="https://github.com/manthri-kumar/Daily-Cart" target="_blank" rel="noopener" class="btn btn-secondary">
+            <i class="fa-brands fa-github"></i>
+            GitHub
+          </a>
+          <a href="https://daily-cart-twy6.vercel.app" target="_blank" rel="noopener" class="btn btn-primary">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            Live Demo
+          </a>
+          <a href="contact.html" class="btn btn-ghost">
+            <i class="fa-solid fa-envelope"></i>
+            Contact Me
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assist/mk-logo.png" alt="Kumar Manthri" class="footer-logo">
+        <p>Full Stack Developer · AI Enthusiast · CSE Undergraduate</p>
+        <p class="footer-built">Built with <span class="heart">♥</span> using HTML, CSS & JavaScript</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Projects.html">Projects</a></li>
+          <li><a href="certificate.html">Certificates</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Connect</h4>
+        <div class="social-row">
+          <a href="https://github.com/manthri-kumar" target="_blank" rel="noopener" class="social-btn">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/kumar-manthri-8479bb32a/" target="_blank" rel="noopener" class="social-btn">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="mailto:manthrikumar7@gmail.com" class="social-btn">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Kumar Manthri. All rights reserved.</p>
+      <a href="Projects.html" class="footer-back">
+        <i class="fa-solid fa-arrow-left"></i>
+        Back to Projects
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="DCProject.js"></script>
 </body>
 </html>

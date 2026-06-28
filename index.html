@@ -3,19 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Kumar Manthri - Full Stack Developer, AI Enthusiast, Computer Science Student. Building scalable web applications and AI-powered products.">
-  <meta name="keywords" content="developer, portfolio, full-stack, AI, internship, react, nodejs">
+  <meta name="description" content="Kumar Manthri - Full Stack Developer, AI Enthusiast, Computer Science Student.">
   <meta name="theme-color" content="#050505">
-  
   <title>Kumar Manthri | Full Stack Developer</title>
-
   <link rel="stylesheet" href="index.css" />
   <link rel="icon" href="assist/mk-logo.png" type="image/png">
-
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
 <body>
 
 <!-- ==================== NAVBAR ==================== -->
@@ -29,31 +23,50 @@
 
     <div class="navbar-center">
       <ul class="nav-links" id="navLinks">
-        <li><a href="#home" class="nav-link active">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="Projects.html" class="nav-link">Projects</a></li>
+        <li><a href="#home"        class="nav-link active">Home</a></li>
+        <li><a href="#about"       class="nav-link">About</a></li>
+        <li><a href="Projects.html"    class="nav-link">Projects</a></li>
         <li><a href="certificate.html" class="nav-link">Certificates</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="contact.html"     class="nav-link">Contact</a></li>
       </ul>
     </div>
 
     <div class="navbar-right">
-      <a href="https://drive.google.com/file/d/1TQFn8cjshh_7elnMkCMPiUxuXOMKG9ar/view?usp=sharing" class="resume-btn" download>
+      <a href="https://drive.google.com/file/d/1TQFn8cjshh_7elnMkCMPiUxuXOMKG9ar/view?usp=sharing"
+         class="resume-btn" target="_blank" rel="noopener">
         <i class="fa-solid fa-download"></i>
         <span>Resume</span>
       </a>
     </div>
 
-    <div class="menu-toggle" id="menuToggle">
+    <!-- Hamburger -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
       <span></span>
       <span></span>
       <span></span>
-    </div>
+    </button>
   </nav>
 </header>
 
+<!-- ==================== MOBILE NAV SHEET ==================== -->
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <ul class="mobile-nav-links">
+    <li><a href="#home"        class="mobile-nav-link active">Home <i class="fa-solid fa-chevron-right"></i></a></li>
+    <li><a href="#about"       class="mobile-nav-link">About <i class="fa-solid fa-chevron-right"></i></a></li>
+    <li><a href="Projects.html"    class="mobile-nav-link">Projects <i class="fa-solid fa-chevron-right"></i></a></li>
+    <li><a href="certificate.html" class="mobile-nav-link">Certificates <i class="fa-solid fa-chevron-right"></i></a></li>
+    <li><a href="contact.html"     class="mobile-nav-link">Contact <i class="fa-solid fa-chevron-right"></i></a></li>
+  </ul>
+  <div class="mobile-nav-divider">
+    <a href="https://drive.google.com/file/d/1TQFn8cjshh_7elnMkCMPiUxuXOMKG9ar/view?usp=sharing"
+       class="mobile-resume-btn" target="_blank" rel="noopener">
+      <i class="fa-solid fa-download"></i>
+      Download Resume
+    </a>
+  </div>
+</nav>
 
-<!-- ==================== HERO SECTION ==================== -->
+<!-- ==================== HERO ==================== -->
 <section class="hero" id="home">
   <div class="hero-container">
     <div class="hero-left">
@@ -63,7 +76,7 @@
       </div>
 
       <h1 class="hero-name">Kumar Manthri</h1>
-      
+
       <p class="hero-title">Full Stack Developer | AI Enthusiast | CSE Undergraduate</p>
 
       <p class="hero-description">
@@ -75,39 +88,22 @@
           <span>View Projects</span>
           <i class="fa-solid fa-arrow-right"></i>
         </a>
-        <a href="https://drive.google.com/file/d/1TQFn8cjshh_7elnMkCMPiUxuXOMKG9ar/view?usp=sharing" class="btn btn-secondary" download>
+        <a href="https://drive.google.com/file/d/1TQFn8cjshh_7elnMkCMPiUxuXOMKG9ar/view?usp=sharing"
+           class="btn btn-secondary" target="_blank" rel="noopener">
           <span>Download Resume</span>
           <i class="fa-solid fa-download"></i>
         </a>
       </div>
 
-      <div class="hero-metrics">
-        <div class="metric">
-          <span class="metric-value">6+</span>
-          <span class="metric-label">Projects</span>
-        </div>
-        <div class="metric">
-          <span class="metric-value">7</span>
-          <span class="metric-label">Certificates</span>
-        </div>
-        <div class="metric">
-          <span class="metric-value">8+</span>
-          <span class="metric-label">Technologies</span>
-        </div>
-        <div class="metric">
-          <span class="metric-value">2026</span>
-          <span class="metric-label">Internship Ready</span>
-        </div>
-      </div>
-
       <div class="hero-socials">
-        <a href="https://github.com/manthri-kumar" target="_blank" rel="noopener noreferrer" class="social-btn" title="GitHub">
+        <a href="https://github.com/manthri-kumar" target="_blank" rel="noopener" class="social-btn" title="GitHub">
           <i class="fa-brands fa-github"></i>
         </a>
-        <a href="https://www.linkedin.com/in/kumar-manthri-8479bb32a/" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn">
+        <a href="https://www.linkedin.com/in/kumar-manthri-8479bb32a/" target="_blank" rel="noopener" class="social-btn" title="LinkedIn">
           <i class="fa-brands fa-linkedin"></i>
         </a>
-        <a href="https://drive.google.com/file/d/1TQFn8cjshh_7elnMkCMPiUxuXOMKG9ar/view?usp=sharing" class="social-btn" title="Resume" download>
+        <a href="https://drive.google.com/file/d/1TQFn8cjshh_7elnMkCMPiUxuXOMKG9ar/view?usp=sharing"
+           class="social-btn" title="Resume" target="_blank" rel="noopener">
           <i class="fa-solid fa-file-pdf"></i>
         </a>
       </div>
@@ -140,8 +136,7 @@
   </div>
 </section>
 
-
-<!-- ==================== ABOUT SECTION ==================== -->
+<!-- ==================== ABOUT ==================== -->
 <section class="about" id="about">
   <div class="container">
     <h2 class="section-title">About Me</h2>
@@ -150,15 +145,9 @@
     <div class="about-grid">
       <div class="about-left">
         <h3>Get to Know Me!</h3>
-        <p>
-          I'm a Computer Science student passionate about creating impactful digital solutions. I enjoy building scalable applications, exploring modern technologies and continuously improving my skills.
-        </p>
-        <p>
-          I love sharing knowledge, learning from others, and collaborating on real-world projects. I enjoy connecting with people who share similar interests in tech.
-        </p>
-        <p>
-          I'm open to <strong>internship & job opportunities</strong> where I can contribute, learn, and grow.
-        </p>
+        <p>I'm a Computer Science student passionate about creating impactful digital solutions. I enjoy building scalable applications, exploring modern technologies and continuously improving my skills.</p>
+        <p>I love sharing knowledge, learning from others, and collaborating on real-world projects. I enjoy connecting with people who share similar interests in tech.</p>
+        <p>I'm open to <strong>internship &amp; job opportunities</strong> where I can contribute, learn, and grow.</p>
       </div>
 
       <div class="about-right">
@@ -169,7 +158,7 @@
           </div>
           <div class="info-card">
             <h4>Focus</h4>
-            <p>Full Stack Development<br><span class="accent-text">AI & Machine Learning</span></p>
+            <p>Full Stack Development<br><span class="accent-text">AI &amp; Machine Learning</span></p>
           </div>
           <div class="info-card">
             <h4>Availability</h4>
@@ -199,8 +188,7 @@
   </div>
 </section>
 
-
-<!-- ==================== CONTACT SECTION ==================== -->
+<!-- ==================== CONTACT ==================== -->
 <section class="contact" id="contact">
   <div class="container">
     <h2 class="section-title">Get In Touch</h2>
@@ -234,14 +222,14 @@
             <p>mr.kumarmanthri@gmail.com</p>
           </div>
         </a>
-        <a href="https://www.linkedin.com/in/kumar-manthri-8479bb32a/" target="_blank" rel="noopener noreferrer" class="contact-link">
+        <a href="https://www.linkedin.com/in/kumar-manthri-8479bb32a/" target="_blank" rel="noopener" class="contact-link">
           <i class="fa-brands fa-linkedin"></i>
           <div>
             <span>LinkedIn</span>
             <p>Kumar Manthri</p>
           </div>
         </a>
-        <a href="https://github.com/manthri-kumar" target="_blank" rel="noopener noreferrer" class="contact-link">
+        <a href="https://github.com/manthri-kumar" target="_blank" rel="noopener" class="contact-link">
           <i class="fa-brands fa-github"></i>
           <div>
             <span>GitHub</span>
@@ -253,7 +241,6 @@
   </div>
 </section>
 
-
 <!-- ==================== FOOTER ==================== -->
 <footer class="footer">
   <div class="container">
@@ -262,43 +249,26 @@
         <img src="assist/mk-logo.png" alt="Kumar Manthri" class="footer-logo">
         <p>Building scalable web applications and AI-powered experiences.</p>
       </div>
-
-      <div class="footer-center">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="Projects.html">Projects</a></li>
-          <li><a href="certificate.html">Certificates</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-
+     
       <div class="footer-right">
         <h4>Follow</h4>
         <div class="footer-socials">
-          <a href="https://github.com/manthri-kumar" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/manthri-kumar" target="_blank" rel="noopener">
             <i class="fa-brands fa-github"></i>
           </a>
-          <a href="https://www.linkedin.com/in/kumar-manthri-8479bb32a/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/kumar-manthri-8479bb32a/" target="_blank" rel="noopener">
             <i class="fa-brands fa-linkedin"></i>
           </a>
         </div>
       </div>
     </div>
-
     <div class="footer-divider"></div>
-
     <div class="footer-bottom">
       <p>&copy; 2025 Kumar Manthri. All rights reserved.</p>
-      <p>Built with <span class="heart">♥</span> using HTML, CSS & JavaScript</p>
     </div>
   </div>
 </footer>
 
-
-<!-- ==================== SCRIPTS ==================== -->
 <script src="script.js"></script>
-
 </body>
 </html>

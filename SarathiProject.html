@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sarathi — AI-Powered Smart Travel Companion built by Kumar Manthri. Full-stack travel platform with AI trip planning, day planner, chatbot, multilingual support, and real-time recommendations.">
+  <meta name="theme-color" content="#050505">
+  <title>Sarathi — Kumar Manthri | Full Stack Developer</title>
+  <link rel="icon" href="assist/mk-logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="Sarathiproject.css">
+</head>
+<body>
+
+<!-- ==================== NAVBAR ==================== -->
+<header class="navbar-wrapper">
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <a href="index.html">
+        <img src="assist/mk-logo.png" alt="Kumar Manthri" class="nav-logo-img">
+      </a>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#overview"      class="nav-link">Overview</a></li>
+      <li><a href="#stack"         class="nav-link">Tech Stack</a></li>
+      <li><a href="#features"      class="nav-link">Features</a></li>
+      <li><a href="#architecture"  class="nav-link">Architecture</a></li>
+      <li><a href="#roadmap"       class="nav-link">Roadmap</a></li>
+      <li><a href="#contact"       class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="assist/certificate/KumarManthri.pdf" class="resume-btn" download>
+        <i class="fa-solid fa-download"></i>
+        Resume
+      </a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero" id="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="container hero-container">
+
+    <!-- Left -->
+    <div class="hero-left">
+      <a href="Projects.html" class="back-link">
+        <i class="fa-solid fa-arrow-left"></i>
+        All Projects
+      </a>
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Featured Project
+      </div>
+      <h1 class="hero-title">Sarathi</h1>
+      <p class="hero-tagline">AI-Powered Smart Travel Companion</p>
+      <p class="hero-desc">
+        Sarathi is an end-to-end AI travel ecosystem that helps users discover destinations, plan smarter with day-wise itineraries, chat with an AI assistant, and manage their journeys — all from a single intelligent platform.
+      </p>
+      <div class="hero-actions">
+        <a href="https://github.com/manthri-kumar/Sarathi"
+           target="_blank" rel="noopener" class="btn btn-secondary">
+          <i class="fa-brands fa-github"></i>
+          View Source Code
+        </a>
+        <a href="https://sarathi-xi.vercel.app/"
+           target="_blank" rel="noopener" class="btn btn-primary">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          Live Demo
+        </a>
+      </div>
+
+      <div class="hero-metrics">
+        <div class="metric">
+          <span class="metric-val">AI</span>
+          <span class="metric-lbl">Trip Planner</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric">
+          <span class="metric-val">3</span>
+          <span class="metric-lbl">Languages</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric">
+          <span class="metric-val">Maps</span>
+          <span class="metric-lbl">Integrated</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric">
+          <span class="metric-val">Live</span>
+          <span class="metric-lbl">Deployed</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Dashboard Preview -->
+    <div class="hero-right">
+      <div class="dashboard-preview">
+        <div class="dash-header">
+          <div class="dash-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <span class="dash-title">sarathi.app — Dashboard</span>
+        </div>
+
+        <div class="dash-body">
+          <!-- Greeting bar -->
+          <div class="dash-location">
+            <i class="fa-solid fa-hand-wave"></i>
+            <span class="location-name">Good morning, Kumar!</span>
+            <span class="location-sub">Hyderabad, IN</span>
+          </div>
+
+          <!-- Quick actions row -->
+          <div class="dash-quick-actions">
+            <div class="dqa-item accent">
+              <i class="fa-solid fa-route"></i>
+              <span>Trip Planner</span>
+            </div>
+            <div class="dqa-item">
+              <i class="fa-solid fa-calendar-day"></i>
+              <span>Day Planner</span>
+            </div>
+            <div class="dqa-item">
+              <i class="fa-solid fa-compass"></i>
+              <span>Explore</span>
+            </div>
+            <div class="dqa-item">
+              <i class="fa-solid fa-robot"></i>
+              <span>AI Chat</span>
+            </div>
+          </div>
+
+          <!-- Top stat row -->
+          <div class="dash-stats">
+            <div class="dash-stat">
+              <i class="fa-solid fa-map-pin"></i>
+              <div>
+                <span class="ds-val">5</span>
+                <span class="ds-lbl">Saved Places</span>
+              </div>
+            </div>
+            <div class="dash-stat accent">
+              <i class="fa-solid fa-suitcase-rolling"></i>
+              <div>
+                <span class="ds-val">3</span>
+                <span class="ds-lbl">My Trips</span>
+              </div>
+            </div>
+            <div class="dash-stat">
+              <i class="fa-solid fa-cloud-sun"></i>
+              <div>
+                <span class="ds-val">32°</span>
+                <span class="ds-lbl">Weather</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI Itinerary section -->
+          <div class="dash-section-label">AI Generated — Goa Trip (3 Days)</div>
+          <div class="dash-journey">
+            <div class="journey-item completed">
+              <div class="journey-icon">✓</div>
+              <span class="journey-text">Day 1 · North Goa Beaches</span>
+            </div>
+            <div class="journey-item completed">
+              <div class="journey-icon">✓</div>
+              <span class="journey-text">Day 2 · Old Goa Churches</span>
+            </div>
+            <div class="journey-item pending">
+              <div class="journey-icon">○</div>
+              <span class="journey-text">Day 3 · South Goa &amp; Spice Farm</span>
+            </div>
+          </div>
+
+          <!-- Budget & Distance -->
+          <div class="dash-quick-stats">
+            <div class="qstat">
+              <span class="qstat-label">Est. Budget</span>
+              <span class="qstat-value">₹8,500</span>
+            </div>
+            <div class="qstat">
+              <span class="qstat-label">Days</span>
+              <span class="qstat-value">3 days</span>
+            </div>
+            <div class="qstat accent">
+              <span class="qstat-label">Status</span>
+              <span class="qstat-value">ACTIVE</span>
+            </div>
+          </div>
+
+          <!-- AI Suggestions -->
+          <div class="dash-section-label">AI Travel Assistant</div>
+          <div class="dash-suggestions">
+            <div class="suggestion">
+              <i class="fa-solid fa-lightbulb"></i>
+              <span>Book ferry to Divar Island</span>
+            </div>
+            <div class="suggestion">
+              <i class="fa-solid fa-language"></i>
+              <span>Switch to Hindi · हिंदी</span>
+            </div>
+            <div class="suggestion">
+              <i class="fa-solid fa-bell"></i>
+              <span>2 nearby places saved</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== OVERVIEW ==================== -->
+<section class="overview-section section" id="overview">
+  <div class="container">
+    <div class="section-label">Project Overview</div>
+    <h2 class="section-title">Why Sarathi?</h2>
+    <div class="overview-grid">
+      <div class="overview-card reveal">
+        <div class="ov-icon"><i class="fa-solid fa-circle-exclamation"></i></div>
+        <h3>Problem Statement</h3>
+        <p>Most travel applications require users to search multiple websites, compare places manually, plan itineraries themselves, estimate budgets separately, and find nearby attractions individually — using five different apps for one journey.</p>
+      </div>
+      <div class="overview-card reveal" style="--delay:0.1s">
+        <div class="ov-icon accent"><i class="fa-solid fa-circle-check"></i></div>
+        <h3>Solution</h3>
+        <p>Sarathi combines AI trip planning, day-wise itinerary generation, an intelligent travel chatbot, location-aware recommendations, saved places, and multilingual support into one seamless platform — your journey, our guidance.</p>
+      </div>
+    </div>
+
+    <!-- Target users row -->
+    <div class="target-users reveal" style="--delay:0.2s">
+      <div class="section-label" style="margin-top:56px;">Who It's For</div>
+      <div class="users-row">
+        <div class="user-pill"><i class="fa-solid fa-person-hiking"></i> Solo Travelers</div>
+        <div class="user-pill"><i class="fa-solid fa-people-roof"></i> Families</div>
+        <div class="user-pill"><i class="fa-solid fa-gopuram"></i> Pilgrims</div>
+        <div class="user-pill"><i class="fa-solid fa-camera"></i> Tourists</div>
+        <div class="user-pill"><i class="fa-solid fa-graduation-cap"></i> Students</div>
+        <div class="user-pill"><i class="fa-solid fa-wallet"></i> Budget Travelers</div>
+        <div class="user-pill"><i class="fa-solid fa-calendar-week"></i> Weekend Explorers</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== TECH STACK ==================== -->
+<section class="stack-section section" id="stack">
+  <div class="container">
+    <div class="section-label">Technologies</div>
+    <h2 class="section-title">Tech Stack</h2>
+    <p class="section-sub">Built with modern technologies chosen for performance, scalability, real-time features, and AI integration.</p>
+    <div class="stack-grid">
+      <div class="stack-item reveal">
+        <div class="stack-icon react"><i class="fa-brands fa-react"></i></div>
+        <span class="stack-name">React.js</span>
+        <span class="stack-role">Frontend</span>
+      </div>
+      <div class="stack-item reveal" style="--delay:0.05s">
+        <div class="stack-icon node"><i class="fa-brands fa-node-js"></i></div>
+        <span class="stack-name">Node.js</span>
+        <span class="stack-role">Backend</span>
+      </div>
+      <div class="stack-item reveal" style="--delay:0.1s">
+        <div class="stack-icon express"><i class="fa-solid fa-server"></i></div>
+        <span class="stack-name">Express.js</span>
+        <span class="stack-role">Framework</span>
+      </div>
+      <div class="stack-item reveal" style="--delay:0.15s">
+        <div class="stack-icon mongo"><i class="fa-solid fa-leaf"></i></div>
+        <span class="stack-name">MongoDB Atlas</span>
+        <span class="stack-role">Database</span>
+      </div>
+      <div class="stack-item reveal" style="--delay:0.2s">
+        <div class="stack-icon ai"><i class="fa-solid fa-sparkles"></i></div>
+        <span class="stack-name">Generative AI</span>
+        <span class="stack-role">Intelligence</span>
+      </div>
+      <div class="stack-item reveal" style="--delay:0.25s">
+        <div class="stack-icon places"><i class="fa-solid fa-map"></i></div>
+        <span class="stack-name">Google Places</span>
+        <span class="stack-role">Discovery</span>
+      </div>
+      <div class="stack-item reveal" style="--delay:0.3s">
+        <div class="stack-icon maps"><i class="fa-solid fa-location-crosshairs"></i></div>
+        <span class="stack-name">Google Maps</span>
+        <span class="stack-role">Navigation</span>
+      </div>
+      <div class="stack-item reveal" style="--delay:0.35s">
+        <div class="stack-icon geocode"><i class="fa-solid fa-earth-asia"></i></div>
+        <span class="stack-name">Geocoding API</span>
+        <span class="stack-role">Coordinates</span>
+      </div>
+      <div class="stack-item reveal" style="--delay:0.4s">
+        <div class="stack-icon jwt"><i class="fa-solid fa-lock"></i></div>
+        <span class="stack-name">JWT + OAuth</span>
+        <span class="stack-role">Authentication</span>
+      </div>
+      <div class="stack-item reveal" style="--delay:0.45s">
+        <div class="stack-icon i18n"><i class="fa-solid fa-language"></i></div>
+        <span class="stack-name">i18next</span>
+        <span class="stack-role">Multilingual</span>
+      </div>
+    </div>
+    <div class="stack-chips">
+      <span class="chip">React.js</span>
+      <span class="chip">React Router</span>
+      <span class="chip">Node.js</span>
+      <span class="chip">Express.js</span>
+      <span class="chip">MongoDB Atlas</span>
+      <span class="chip">Generative AI</span>
+      <span class="chip">Google Places API</span>
+      <span class="chip">Google Maps API</span>
+      <span class="chip">Google Geocoding API</span>
+      <span class="chip">JWT</span>
+      <span class="chip">Google OAuth</span>
+      <span class="chip">i18next</span>
+      <span class="chip">Axios</span>
+      <span class="chip">Nodemailer</span>
+      <span class="chip">Vercel</span>
+      <span class="chip">Render</span>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FEATURES ==================== -->
+<section class="features-section section" id="features">
+  <div class="container">
+    <div class="section-label">Capabilities</div>
+    <h2 class="section-title">Core Features</h2>
+    <p class="section-sub">Every feature engineered to deliver intelligent, personalized travel experiences from discovery to journey completion.</p>
+    <div class="features-grid">
+
+      <div class="feature-card reveal">
+        <div class="fc-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>Secure Authentication</h3>
+        <p>Full auth system with Email OTP verification, password reset via OTP, Google OAuth login, JWT-protected routes, and secure session management.</p>
+        <div class="fc-tags">
+          <span>JWT</span>
+          <span>Google OAuth</span>
+          <span>OTP Email</span>
+        </div>
+      </div>
+
+      <div class="feature-card reveal" style="--delay:0.08s">
+        <div class="fc-icon"><i class="fa-solid fa-gauge-high"></i></div>
+        <h3>Smart Dashboard</h3>
+        <p>Your travel command center — personalized greeting, hero banner, quick action cards, recommended places, nearby attractions, search, notifications, and profile.</p>
+        <div class="fc-tags">
+          <span>Recommendations</span>
+          <span>Nearby</span>
+          <span>Search</span>
+        </div>
+      </div>
+
+      <div class="feature-card reveal" style="--delay:0.16s">
+        <div class="fc-icon"><i class="fa-solid fa-compass"></i></div>
+        <h3>Explore Places</h3>
+        <p>Discover places using current location, search, and categories. See images, ratings, reviews, open status, and maps integration for every destination.</p>
+        <div class="fc-tags">
+          <span>Google Places</span>
+          <span>Categories</span>
+          <span>Maps</span>
+        </div>
+      </div>
+
+      <div class="feature-card reveal" style="--delay:0.24s">
+        <div class="fc-icon"><i class="fa-solid fa-route"></i></div>
+        <h3>AI Trip Planner</h3>
+        <p>Provide destination, budget, number of days, and interests — Sarathi generates a complete itinerary with estimated travel cost, suggested places, and day-wise schedule.</p>
+        <div class="fc-tags">
+          <span>Generative AI</span>
+          <span>Budget Planning</span>
+          <span>Itinerary</span>
+        </div>
+      </div>
+
+      <div class="feature-card reveal" style="--delay:0.32s">
+        <div class="fc-icon"><i class="fa-solid fa-calendar-day"></i></div>
+        <h3>AI Day Planner</h3>
+        <p>Generate a perfect one-day itinerary based on your interest — Nature, Temples, Food, Adventure, Shopping, History, and more. No full trip required.</p>
+        <div class="fc-tags">
+          <span>Generative AI</span>
+          <span>One-Day Plan</span>
+          <span>Interests</span>
+        </div>
+      </div>
+
+      <div class="feature-card reveal" style="--delay:0.40s">
+        <div class="fc-icon"><i class="fa-solid fa-robot"></i></div>
+        <h3>AI Travel Chatbot</h3>
+        <p>An intelligent travel assistant that answers queries about nearby places, restaurants, temples, attractions, and general travel suggestions in natural language.</p>
+        <div class="fc-tags">
+          <span>Generative AI</span>
+          <span>NLU</span>
+          <span>Real-time</span>
+        </div>
+      </div>
+
+      <div class="feature-card reveal" style="--delay:0.48s">
+        <div class="fc-icon"><i class="fa-solid fa-bookmark"></i></div>
+        <h3>Saved Places</h3>
+        <p>Bookmark destinations for future trips. Access all your saved places from the dashboard and plan future journeys around them effortlessly.</p>
+        <div class="fc-tags">
+          <span>Bookmarks</span>
+          <span>Personalized</span>
+        </div>
+      </div>
+
+      <div class="feature-card reveal" style="--delay:0.56s">
+        <div class="fc-icon"><i class="fa-solid fa-suitcase-rolling"></i></div>
+        <h3>My Trips</h3>
+        <p>All AI-generated trips are stored so you can revisit, continue planning, or share your itineraries at any time — your travel history in one place.</p>
+        <div class="fc-tags">
+          <span>Trip History</span>
+          <span>MongoDB</span>
+        </div>
+      </div>
+
+      <div class="feature-card reveal" style="--delay:0.64s">
+        <div class="fc-icon"><i class="fa-solid fa-language"></i></div>
+        <h3>Multilingual Support</h3>
+        <p>Sarathi dynamically switches the entire interface between English, Telugu, and Hindi using i18next — making travel planning accessible to more people.</p>
+        <div class="fc-tags">
+          <span>English</span>
+          <span>Telugu</span>
+          <span>Hindi</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== API ROUTES ==================== -->
+<section class="api-section section">
+  <div class="container">
+    <div class="section-label">Backend</div>
+    <h2 class="section-title">API Routes</h2>
+    <p class="section-sub">RESTful API architecture covering every layer of the travel platform.</p>
+    <div class="api-grid">
+      <div class="api-route reveal"><span class="api-method">POST/GET</span><span class="api-path">/api/auth</span><span class="api-desc">Signup, Login, OTP, Google OAuth</span></div>
+      <div class="api-route reveal" style="--delay:0.05s"><span class="api-method">GET</span><span class="api-path">/api/places</span><span class="api-desc">Search & discover places</span></div>
+      <div class="api-route reveal" style="--delay:0.1s"><span class="api-method">POST</span><span class="api-path">/api/chat</span><span class="api-desc">AI travel chatbot responses</span></div>
+      <div class="api-route reveal" style="--delay:0.15s"><span class="api-method">POST</span><span class="api-path">/api/trip-planner</span><span class="api-desc">Generate full trip itinerary</span></div>
+      <div class="api-route reveal" style="--delay:0.2s"><span class="api-method">POST</span><span class="api-path">/api/day-planner</span><span class="api-desc">Generate one-day itinerary</span></div>
+      <div class="api-route reveal" style="--delay:0.25s"><span class="api-method">GET/POST</span><span class="api-path">/api/trips</span><span class="api-desc">Manage saved trip history</span></div>
+      <div class="api-route reveal" style="--delay:0.3s"><span class="api-method">GET/POST</span><span class="api-path">/api/saved</span><span class="api-desc">Bookmark places</span></div>
+      <div class="api-route reveal" style="--delay:0.35s"><span class="api-method">GET</span><span class="api-path">/api/recommendations</span><span class="api-desc">Personalized place suggestions</span></div>
+      <div class="api-route reveal" style="--delay:0.4s"><span class="api-method">POST</span><span class="api-path">/api/itinerary</span><span class="api-desc">Itinerary CRUD operations</span></div>
+      <div class="api-route reveal" style="--delay:0.45s"><span class="api-method">GET</span><span class="api-path">/api/geocode</span><span class="api-desc">Coordinates ↔ Address</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== ARCHITECTURE ==================== -->
+<section class="arch-section section" id="architecture">
+  <div class="container">
+    <div class="section-label">System Design</div>
+    <h2 class="section-title">Architecture</h2>
+    <p class="section-sub">A layered full-stack architecture ensuring real-time data, AI intelligence, and seamless user experiences.</p>
+    <div class="arch-flow">
+      <div class="arch-node reveal">
+        <div class="arch-icon"><i class="fa-solid fa-display"></i></div>
+        <div class="arch-info">
+          <h4>React Frontend</h4>
+          <p>Premium UI · React Router · i18next · Axios · Lucide Icons</p>
+        </div>
+        <div class="arch-tag">Frontend · Vercel</div>
+      </div>
+      <div class="arch-connector reveal" style="--delay:0.05s">
+        <div class="connector-line"></div>
+        <div class="connector-dot"></div>
+        <span class="connector-label">REST API (Axios)</span>
+      </div>
+      <div class="arch-node reveal" style="--delay:0.1s">
+        <div class="arch-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <div class="arch-info">
+          <h4>Auth Middleware</h4>
+          <p>JWT Verification · Google OAuth · OTP Email via Nodemailer</p>
+        </div>
+        <div class="arch-tag accent">Security</div>
+      </div>
+      <div class="arch-connector reveal" style="--delay:0.15s">
+        <div class="connector-line"></div>
+        <div class="connector-dot"></div>
+        <span class="connector-label">Validated Request</span>
+      </div>
+      <div class="arch-node reveal" style="--delay:0.2s">
+        <div class="arch-icon"><i class="fa-brands fa-node-js"></i></div>
+        <div class="arch-info">
+          <h4>Express Backend</h4>
+          <p>10 REST Routes · Business Logic · Trip, Day & Chat Orchestration</p>
+        </div>
+        <div class="arch-tag">Backend · Render</div>
+      </div>
+      <div class="arch-connector reveal" style="--delay:0.25s">
+        <div class="connector-line"></div>
+        <div class="connector-dot"></div>
+        <span class="connector-label">Service Layer</span>
+      </div>
+      <div class="arch-node reveal" style="--delay:0.3s">
+        <div class="arch-icon"><i class="fa-solid fa-sparkles"></i></div>
+        <div class="arch-info">
+          <h4>Generative AI</h4>
+          <p>Trip Planner · Day Planner · Travel Chatbot · Recommendations</p>
+        </div>
+        <div class="arch-tag accent">Intelligence</div>
+      </div>
+      <div class="arch-connector reveal" style="--delay:0.35s">
+        <div class="connector-line"></div>
+        <div class="connector-dot"></div>
+        <span class="connector-label">API Calls</span>
+      </div>
+      <div class="arch-node reveal" style="--delay:0.4s">
+        <div class="arch-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+        <div class="arch-info">
+          <h4>Google APIs</h4>
+          <p>Places · Maps · Directions · Geocoding · Location Intelligence</p>
+        </div>
+        <div class="arch-tag">External</div>
+      </div>
+      <div class="arch-connector reveal" style="--delay:0.45s">
+        <div class="connector-line"></div>
+        <div class="connector-dot"></div>
+        <span class="connector-label">Database Query</span>
+      </div>
+      <div class="arch-node reveal" style="--delay:0.5s">
+        <div class="arch-icon"><i class="fa-solid fa-database"></i></div>
+        <div class="arch-info">
+          <h4>MongoDB Atlas</h4>
+          <p>Users · Trips · Saved Places · Itineraries · Preferences</p>
+        </div>
+        <div class="arch-tag">Data</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== IMPLEMENTED FEATURES TIMELINE ==================== -->
+<section class="journey-section section">
+  <div class="container">
+    <div class="section-label">Progress</div>
+    <h2 class="section-title">Implemented Features</h2>
+    <p class="section-sub">A complete timeline of development milestones — all live in production.</p>
+    <div class="journey-timeline">
+      <div class="jt-item reveal">
+        <div class="jt-node"><span>01</span></div>
+        <div class="jt-content">
+          <h4>Authentication System</h4>
+          <p>Complete auth flow: Signup, Email OTP verification, Login, Forgot Password, Password reset via OTP, Google OAuth, JWT-protected routes.</p>
+          <span class="jt-status live">Live</span>
+        </div>
+      </div>
+      <div class="jt-item reveal" style="--delay:0.08s">
+        <div class="jt-node"><span>02</span></div>
+        <div class="jt-content">
+          <h4>Smart Dashboard</h4>
+          <p>Personalized greeting, hero banner, quick action cards, recommended places, nearby attractions, search, language selector, notifications, and profile.</p>
+          <span class="jt-status live">Live</span>
+        </div>
+      </div>
+      <div class="jt-item reveal" style="--delay:0.16s">
+        <div class="jt-node"><span>03</span></div>
+        <div class="jt-content">
+          <h4>Explore Places</h4>
+          <p>Location-based place discovery with categories, ratings, reviews, open status, photos, and Google Maps integration for navigation.</p>
+          <span class="jt-status live">Live</span>
+        </div>
+      </div>
+      <div class="jt-item reveal" style="--delay:0.24s">
+        <div class="jt-node"><span>04</span></div>
+        <div class="jt-content">
+          <h4>AI Trip Planner</h4>
+          <p>Input destination, budget, days, and interests — AI generates a complete day-wise itinerary with estimated costs and suggested places.</p>
+          <span class="jt-status live">Live</span>
+        </div>
+      </div>
+      <div class="jt-item reveal" style="--delay:0.32s">
+        <div class="jt-node"><span>05</span></div>
+        <div class="jt-content">
+          <h4>AI Day Planner</h4>
+          <p>Generate a perfect one-day plan based on interests: Nature, Temples, Food, Adventure, Shopping, or History — without planning a full trip.</p>
+          <span class="jt-status live">Live</span>
+        </div>
+      </div>
+      <div class="jt-item reveal" style="--delay:0.40s">
+        <div class="jt-node"><span>06</span></div>
+        <div class="jt-content">
+          <h4>AI Travel Chatbot</h4>
+          <p>Intelligent travel assistant answering queries about nearby places, restaurants, temples, attractions, and general travel suggestions.</p>
+          <span class="jt-status live">Live</span>
+        </div>
+      </div>
+      <div class="jt-item reveal" style="--delay:0.48s">
+        <div class="jt-node"><span>07</span></div>
+        <div class="jt-content">
+          <h4>Saved Places &amp; My Trips</h4>
+          <p>Bookmark destinations and persist all AI-generated trips so users can revisit or continue planning at any time.</p>
+          <span class="jt-status live">Live</span>
+        </div>
+      </div>
+      <div class="jt-item reveal" style="--delay:0.56s">
+        <div class="jt-node"><span>08</span></div>
+        <div class="jt-content">
+          <h4>Multilingual Support</h4>
+          <p>Dynamic language switching across the entire interface — English, Telugu, and Hindi — powered by i18next.</p>
+          <span class="jt-status live">Live</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== DEVELOPMENT JOURNEY ==================== -->
+<section class="roadmap-section section">
+  <div class="container">
+    <div class="section-label">Timeline</div>
+    <h2 class="section-title">Development Journey</h2>
+    <p class="section-sub">From research to production — the complete engineering lifecycle.</p>
+    <div class="roadmap-grid">
+      <div class="roadmap-card reveal">
+        <div class="rm-icon"><i class="fa-solid fa-lightbulb"></i></div>
+        <h4>Research &amp; Planning</h4>
+        <p>Market analysis identifying gaps in travel platforms — no single tool combined AI planning, chatbot, multilingual support, and map navigation.</p>
+        <span class="rm-status completed">Completed</span>
+      </div>
+      <div class="roadmap-card reveal" style="--delay:0.08s">
+        <div class="rm-icon"><i class="fa-solid fa-palette"></i></div>
+        <h4>UI Design</h4>
+        <p>Premium dark interface inspired by Linear, Stripe, Vercel, Apple Wallet, and Notion — glassmorphism, soft gradients, micro-interactions.</p>
+        <span class="rm-status completed">Completed</span>
+      </div>
+      <div class="roadmap-card reveal" style="--delay:0.16s">
+        <div class="rm-icon"><i class="fa-solid fa-code"></i></div>
+        <h4>Frontend Development</h4>
+        <p>React SPA with React Router, Axios, Lucide Icons, i18next, responsive layouts, and smooth animations across all modules.</p>
+        <span class="rm-status completed">Completed</span>
+      </div>
+      <div class="roadmap-card reveal" style="--delay:0.24s">
+        <div class="rm-icon"><i class="fa-solid fa-server"></i></div>
+        <h4>Backend Development</h4>
+        <p>Node.js + Express API with 10 route modules, MongoDB Atlas, JWT auth, OTP email via Nodemailer, and Google OAuth integration.</p>
+        <span class="rm-status completed">Completed</span>
+      </div>
+      <div class="roadmap-card reveal" style="--delay:0.32s">
+        <div class="rm-icon"><i class="fa-solid fa-robot"></i></div>
+        <h4>AI Integration</h4>
+        <p>Generative AI powering the Trip Planner, Day Planner, and Travel Chatbot — personalized itineraries, intelligent responses, and travel recommendations.</p>
+        <span class="rm-status completed">Completed</span>
+      </div>
+      <div class="roadmap-card reveal" style="--delay:0.40s">
+        <div class="rm-icon"><i class="fa-solid fa-rocket"></i></div>
+        <h4>Deployment</h4>
+        <p>Frontend on Vercel with CI/CD pipeline; backend on Render with environment-based configuration and production secrets management.</p>
+        <span class="rm-status completed">Completed</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FUTURE ROADMAP ==================== -->
+<section class="future-roadmap section" id="roadmap">
+  <div class="container">
+    <div class="section-label">Future</div>
+    <h2 class="section-title">Roadmap &amp; Enhancements</h2>
+    <p class="section-sub">Planned next-generation capabilities from the Sarathi vision document.</p>
+    <div class="future-grid">
+      <div class="future-card reveal">
+        <div class="fc-icon-sm"><i class="fa-solid fa-microphone"></i></div>
+        <h4>Voice Assistant</h4>
+        <p>Hands-free travel planning and navigation via natural language voice input.</p>
+        <span class="fc-status planned">Planned</span>
+      </div>
+      <div class="future-card reveal" style="--delay:0.08s">
+        <div class="fc-icon-sm"><i class="fa-solid fa-hotel"></i></div>
+        <h4>Hotel Recommendations</h4>
+        <p>Integrated hotel and accommodation suggestions for multi-day trip planning.</p>
+        <span class="fc-status planned">Planned</span>
+      </div>
+      <div class="future-card reveal" style="--delay:0.16s">
+        <div class="fc-icon-sm"><i class="fa-solid fa-utensils"></i></div>
+        <h4>Restaurant Recommendations</h4>
+        <p>Personalized food suggestions near destinations based on cuisine preferences.</p>
+        <span class="fc-status planned">Planned</span>
+      </div>
+      <div class="future-card reveal" style="--delay:0.24s">
+        <div class="fc-icon-sm"><i class="fa-solid fa-wallet"></i></div>
+        <h4>AI Budget Optimization</h4>
+        <p>Smart budget planning across accommodation, food, transport, and attractions.</p>
+        <span class="fc-status planned">Planned</span>
+      </div>
+      <div class="future-card reveal" style="--delay:0.32s">
+        <div class="fc-icon-sm"><i class="fa-solid fa-cloud-sun-rain"></i></div>
+        <h4>Live Weather Integration</h4>
+        <p>Real-time weather data embedded in trip planning and daily itineraries.</p>
+        <span class="fc-status planned">Planned</span>
+      </div>
+      <div class="future-card reveal" style="--delay:0.40s">
+        <div class="fc-icon-sm"><i class="fa-solid fa-train"></i></div>
+        <h4>Train &amp; Flight Integration</h4>
+        <p>Transport booking and scheduling directly within the platform.</p>
+        <span class="fc-status planned">Planned</span>
+      </div>
+      <div class="future-card reveal" style="--delay:0.48s">
+        <div class="fc-icon-sm"><i class="fa-solid fa-receipt"></i></div>
+        <h4>Expense Tracking</h4>
+        <p>Log and monitor travel expenses against planned budgets in real time.</p>
+        <span class="fc-status future">Future</span>
+      </div>
+      <div class="future-card reveal" style="--delay:0.56s">
+        <div class="fc-icon-sm"><i class="fa-solid fa-people-group"></i></div>
+        <h4>Collaborative Trip Planning</h4>
+        <p>Plan trips together with friends and family with shared itineraries and voting.</p>
+        <span class="fc-status future">Future</span>
+      </div>
+      <div class="future-card reveal" style="--delay:0.64s">
+        <div class="fc-icon-sm"><i class="fa-solid fa-wifi-off"></i></div>
+        <h4>Offline Itinerary Access</h4>
+        <p>Download itineraries for offline use in areas with poor connectivity.</p>
+        <span class="fc-status future">Future</span>
+      </div>
+      <div class="future-card reveal" style="--delay:0.72s">
+        <div class="fc-icon-sm"><i class="fa-solid fa-chart-line"></i></div>
+        <h4>Travel Analytics</h4>
+        <p>Personalized insights on travel patterns, spending habits, and preferences.</p>
+        <span class="fc-status future">Future</span>
+      </div>
+      <div class="future-card reveal" style="--delay:0.80s">
+        <div class="fc-icon-sm"><i class="fa-solid fa-bus"></i></div>
+        <h4>Public Transport Guidance</h4>
+        <p>Integrated local transport routes and schedules for budget-friendly travel.</p>
+        <span class="fc-status future">Future</span>
+      </div>
+      <div class="future-card reveal" style="--delay:0.88s">
+        <div class="fc-icon-sm"><i class="fa-solid fa-triangle-exclamation"></i></div>
+        <h4>Risk &amp; Safety Alerts</h4>
+        <p>Real-time safety warnings, weather alerts, and risk notifications for destinations.</p>
+        <span class="fc-status future">Future</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CONTACT / CTA ==================== -->
+<section class="cta-section section" id="contact">
+  <div class="container">
+    <div class="cta-card reveal">
+      <div class="cta-glow"></div>
+      <div class="cta-content">
+        <div class="section-label center">Let's Connect</div>
+        <h2>Interested in AI-Powered Travel Platforms?</h2>
+        <p>Explore the source code, see the live demo, or connect with me for collaboration opportunities on intelligent travel and tourism technologies.</p>
+        <div class="cta-actions">
+          <a href="https://github.com/manthri-kumar" target="_blank" rel="noopener" class="btn btn-secondary">
+            <i class="fa-brands fa-github"></i>
+            GitHub
+          </a>
+          <a href="https://sarathi-xi.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            Live Demo
+          </a>
+          <a href="contact.html" class="btn btn-ghost">
+            <i class="fa-solid fa-envelope"></i>
+            Contact Me
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assist/mk-logo.png" alt="Kumar Manthri" class="footer-logo">
+        <p>Full Stack Developer · AI Enthusiast · CSE Undergraduate</p>
+        <p class="footer-built">Built with <span class="heart">♥</span> using React, Node.js &amp; Generative AI</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Projects.html">Projects</a></li>
+          <li><a href="certificate.html">Certificates</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Connect</h4>
+        <div class="social-row">
+          <a href="https://github.com/manthri-kumar" target="_blank" rel="noopener" class="social-btn">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/kumar-manthri-8479bb32a/" target="_blank" rel="noopener" class="social-btn">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="mailto:manthrikumar7@gmail.com" class="social-btn">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Kumar Manthri. All rights reserved.</p>
+      <a href="Projects.html" class="footer-back">
+        <i class="fa-solid fa-arrow-left"></i>
+        Back to Projects
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="SarathiProject.js"></script>
+</body>
+</html>
