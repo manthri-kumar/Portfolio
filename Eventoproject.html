@@ -3,101 +3,455 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evento - Kumar Manthri</title>
-    <link rel="icon" href="assist/evento.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="EvntoProject.css">
+    <meta name="description" content="Evento - Event Management Platform - Smart tools for creating, organizing, and managing events seamlessly.">
+    <meta name="theme-color" content="#050505">
     
+    <title>Evento - Kumar Manthri | Event Management Platform</title>
+    
+    <link rel="icon" href="assist/evento.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="EvntoProject.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1 class="logo">
-                    <a href="index.html" style="color: aliceblue;text-decoration: none;">Kumar Manthri</a> 
-            </h1>
 
-            <nav>
-                <a href="#about">About</a>
-                <a href="#technologies">Technologies</a>
-                <a href="#features">Features</a>
-                <a href="#contact">Contact</a>
-            </nav>
+
+<!-- ==================== NAVBAR ==================== -->
+<header class="navbar-wrapper">
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="index.html" class="logo">
+                <img src="assist/mk-logo.png" alt="Kumar Manthri Logo">
+            </a>
         </div>
-    </header>
 
-    <section class="hero" id="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2 class="project-title">Evento</h2>
-                <p class="tagline">Simplify your event management with smart tools and seamless planning.</p>
-                <br>
-                <div class="btn-group">
-                    <a href="https://github.com/your-evento-repo" target="_blank" class="cta-btn">GitHub</a>
-                    <a href="https://your-evento-live-demo.com" target="_blank" class="cta-btn">Live Demo</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="about" id="about">
-        <div class="container about-container">
-            <div class="project-image">
-                <img src="assist/Evento.png" alt="Evento Project" />
-            </div>
-            <div class="about-content">
-                <h2>About the Project</h2>
-                <p>Evento is a modern event management platform that allows users to create, organize, and manage events with ease. It features attendee tracking, online ticketing, event updates, and an interactive UI for a flawless experience.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="technologies" id="technologies">
-        <div class="container">
-            <h2>Technologies Used</h2>
-            <ul class="tech-list">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
+        <div class="navbar-center">
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="Projects.html" class="nav-link">Projects</a></li>
+                <li><a href="certificate.html" class="nav-link">Certificates</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
         </div>
-    </section>
 
-    <section class="features" id="features">
-        <div class="container">
-            <h2>Key Features</h2>
-            <div class="feature-list">
-                <div class="feature">
-                    <h3>Event Creation</h3>
-                    <p>Create and customize events with images, schedules, and attendee limits.</p>
+        <div class="navbar-right">
+            <a href="assist/certificate/KumarManthri.pdf" class="resume-btn" download>
+                <i class="fa-solid fa-download"></i>
+                <span>Resume</span>
+            </a>
+        </div>
+
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+</header>
+
+<!-- ==================== HERO SECTION ==================== -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-badge">
+            <span class="badge-dot">🎉</span>
+            <span>Event Management Platform</span>
+        </div>
+
+        <h1 class="hero-title">Evento</h1>
+        
+        <p class="hero-subtitle">
+            A modern event management platform that simplifies event creation, organization, and attendee management. Seamless planning with smart tools and an interactive user experience.
+        </p>
+
+        <div class="hero-cta">
+            <a href="https://github.com/manthri-kumar" target="_blank" class="btn btn-primary">
+                <i class="fa-brands fa-github"></i>
+                <span>View on GitHub</span>
+            </a>
+            <a href="#features" class="btn btn-secondary">
+                <i class="fa-solid fa-arrow-down"></i>
+                <span>Learn More</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== PROJECT OVERVIEW ==================== -->
+<section class="overview-section">
+    <div class="container">
+        <div class="overview-grid">
+            <div class="overview-item">
+                <div class="overview-icon">
+                    <i class="fa-solid fa-calendar"></i>
                 </div>
-                <div class="feature">
-                    <h3>Online Registration</h3>
-                    <p>Allow participants to register and get instant confirmation emails.</p>
+                <h3>Event Creation</h3>
+                <p>Create and customize events with images, schedules, descriptions, and attendee limits.</p>
+            </div>
+
+            <div class="overview-item">
+                <div class="overview-icon">
+                    <i class="fa-solid fa-clipboard-check"></i>
                 </div>
-                <div class="feature">
-                    <h3>Live Updates</h3>
-                    <p>Send real-time notifications and event updates to attendees.</p>
+                <h3>Event Registration</h3>
+                <p>Allow participants to register and receive instant confirmations with event details.</p>
+            </div>
+
+            <div class="overview-item">
+                <div class="overview-icon">
+                    <i class="fa-solid fa-bell"></i>
                 </div>
-                <div class="feature">
-                    <h3>Responsive Design</h3>
-                    <p>Optimized for both desktop and mobile devices for a smooth experience everywhere.</p>
+                <h3>Live Updates</h3>
+                <p>Send real-time notifications and event updates directly to all attendees.</p>
+            </div>
+
+            <div class="overview-item">
+                <div class="overview-icon">
+                    <i class="fa-solid fa-mobile"></i>
+                </div>
+                <h3>Fully Responsive</h3>
+                <p>Optimized design for desktop, tablet, and mobile devices for seamless experiences.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== PROJECT DETAILS ==================== -->
+<section class="details-section">
+    <div class="container">
+        <div class="details-grid">
+            <div class="details-content">
+                <h2>About the Project</h2>
+                
+                <p>
+                    Evento is a comprehensive event management platform that empowers users to create, organize, and manage events with ease. Built with modern web technologies, it features an interactive user interface, attendee tracking, online ticketing, real-time event updates, and seamless event discovery.
+                </p>
+
+                <h3>Core Capabilities</h3>
+                <ul class="capabilities-list">
+                    <li><span>1</span> Create custom events with detailed information</li>
+                    <li><span>2</span> Manage attendee registration and ticketing</li>
+                    <li><span>3</span> Send live updates and notifications</li>
+                    <li><span>4</span> Browse and discover events easily</li>
+                    <li><span>5</span> Track event metrics and attendance</li>
+                </ul>
+
+                <h3>Key Features</h3>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Event creation and customization</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Online registration system</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Real-time event notifications</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Attendee management dashboard</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Event discovery and search</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Responsive mobile design</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-image">
+                <img src="assist/evento.png" alt="Evento Project">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== TECHNOLOGIES SECTION ==================== -->
+<section class="tech-section">
+    <div class="container">
+        <h2>Technology Stack</h2>
+        <p class="section-subtitle">Frontend technologies used to build this event management platform.</p>
+
+        <div class="tech-grid">
+            <div class="tech-card">
+                <div class="tech-icon">
+                    <i class="fa-brands fa-html5"></i>
+                </div>
+                <h3>HTML5</h3>
+                <p>Semantic markup for structured event management interface.</p>
+            </div>
+
+            <div class="tech-card">
+                <div class="tech-icon">
+                    <i class="fa-brands fa-css3-alt"></i>
+                </div>
+                <h3>CSS3</h3>
+                <p>Modern styling with responsive design and smooth animations.</p>
+            </div>
+
+            <div class="tech-card">
+                <div class="tech-icon">
+                    <i class="fa-brands fa-js"></i>
+                </div>
+                <h3>JavaScript</h3>
+                <p>Interactive features including form handling and event management.</p>
+            </div>
+
+            <div class="tech-card">
+                <div class="tech-icon">
+                    <i class="fa-solid fa-palette"></i>
+                </div>
+                <h3>UI/UX Design</h3>
+                <p>Intuitive user interface for seamless event management experience.</p>
+            </div>
+
+            <div class="tech-card">
+                <div class="tech-icon">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+                <h3>LocalStorage</h3>
+                <p>Client-side data persistence for events and registrations.</p>
+            </div>
+
+            <div class="tech-card">
+                <div class="tech-icon">
+                    <i class="fa-solid fa-mobile"></i>
+                </div>
+                <h3>Responsive Design</h3>
+                <p>Mobile-first approach ensuring excellent experience on all devices.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== KEY FEATURES ==================== -->
+<section class="features-section" id="features">
+    <div class="container">
+        <h2>Key Features & Functionality</h2>
+        <p class="section-subtitle">Comprehensive event management capabilities for modern organizers.</p>
+
+        <div class="features-showcase">
+            <div class="feature-card">
+                <div class="feature-number">01</div>
+                <h3>Event Creation</h3>
+                <p>Create events with custom details including title, description, date, time, location, and attendee capacity limits.</p>
+                <div class="feature-tech">
+                    <span>Form Handling</span>
+                    <span>Data Validation</span>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-number">02</div>
+                <h3>Registration System</h3>
+                <p>Seamless registration process allowing attendees to sign up and receive instant confirmations with event details.</p>
+                <div class="feature-tech">
+                    <span>User Forms</span>
+                    <span>Confirmation Emails</span>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-number">03</div>
+                <h3>Event Discovery</h3>
+                <p>Browse and discover events with advanced search and filtering capabilities based on category, date, and location.</p>
+                <div class="feature-tech">
+                    <span>Search Filters</span>
+                    <span>Event Browsing</span>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-number">04</div>
+                <h3>Live Notifications</h3>
+                <p>Send real-time updates and notifications to all registered attendees about event changes and announcements.</p>
+                <div class="feature-tech">
+                    <span>Push Notifications</span>
+                    <span>Real-time Updates</span>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-number">05</div>
+                <h3>Attendee Dashboard</h3>
+                <p>Comprehensive dashboard showing registered events, attendance status, and personalized event recommendations.</p>
+                <div class="feature-tech">
+                    <span>User Dashboard</span>
+                    <span>Analytics</span>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-number">06</div>
+                <h3>Responsive Interface</h3>
+                <p>Fully responsive design that works perfectly on desktop, tablet, and mobile devices with optimized performance.</p>
+                <div class="feature-tech">
+                    <span>Mobile Design</span>
+                    <span>Cross-Platform</span>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2>Get in Touch</h2>
-            <p>If you'd like to learn more about the Evento project or have any questions, feel free to reach out!</p>
-            <a href="mailto:kumar@example.com" class="cta-btn">Contact Me</a>
-        </div>
-    </section>
+<!-- ==================== USER FLOW ==================== -->
+<section class="flow-section">
+    <div class="container">
+        <h2>User Journey</h2>
+        <p class="section-subtitle">How users interact with the Evento platform.</p>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Kumar Manthri. All Rights Reserved.</p>
+        <div class="flow-grid">
+            <div class="flow-item">
+                <div class="flow-number">1</div>
+                <h4>Browse Events</h4>
+                <p>Discover upcoming events matching interests</p>
+            </div>
+
+            <div class="flow-arrow">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+            <div class="flow-item">
+                <div class="flow-number">2</div>
+                <h4>Register</h4>
+                <p>Sign up and receive confirmations</p>
+            </div>
+
+            <div class="flow-arrow">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+            <div class="flow-item">
+                <div class="flow-number">3</div>
+                <h4>Receive Updates</h4>
+                <p>Get notifications about events</p>
+            </div>
+
+            <div class="flow-arrow">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+            <div class="flow-item">
+                <div class="flow-number">4</div>
+                <h4>Attend Event</h4>
+                <p>Enjoy seamless event experience</p>
+            </div>
         </div>
-    </footer>
+    </div>
+</section>
+
+<!-- ==================== PROJECT METRICS ==================== -->
+<section class="metrics-section">
+    <div class="container">
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class="fa-solid fa-events"></i>
+                </div>
+                <h3>100+</h3>
+                <p>Events capacity</p>
+            </div>
+
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <h3>1000+</h3>
+                <p>Attendee management</p>
+            </div>
+
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class="fa-solid fa-mobile"></i>
+                </div>
+                <h3>100%</h3>
+                <p>Mobile responsive</p>
+            </div>
+
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class="fa-solid fa-zap"></i>
+                </div>
+                <h3>Fast</h3>
+                <p>Optimized performance</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== CTA SECTION ==================== -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Interested in My Work?</h2>
+            <p>
+                This event management project showcases my ability to build functional, user-friendly web applications with modern design principles. I'm actively seeking full stack development internship opportunities.
+            </p>
+
+            <div class="cta-buttons">
+                <a href="Projects.html" class="btn btn-primary">
+                    <i class="fa-solid fa-folder"></i>
+                    <span>View All Projects</span>
+                </a>
+                <a href="https://github.com/manthri-kumar" target="_blank" class="btn btn-secondary">
+                    <i class="fa-brands fa-github"></i>
+                    <span>View GitHub</span>
+                </a>
+                <a href="contact.html" class="btn btn-secondary">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Get in Touch</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-left">
+                <img src="assist/mk-logo.png" alt="Kumar Manthri" class="footer-logo">
+                <p>Full Stack Developer | Event Management Systems</p>
+            </div>
+
+            <div class="footer-center">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Projects.html">Projects</a></li>
+                    <li><a href="certificate.html">Certificates</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-right">
+                <h4>Follow</h4>
+                <div class="footer-socials">
+                    <a href="https://github.com/manthri-kumar" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/kumar-manthri-8479bb32a/" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Kumar Manthri. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- ==================== SCRIPTS ==================== -->
+<script src="Evento-refined.js"></script>
+
 </body>
 </html>
